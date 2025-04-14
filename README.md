@@ -1,42 +1,45 @@
-# COSAHackathonTemplate
+# *CDISC 360i* 
 
-This is a template for COSA workshops/open source projects which could be used to create new projects.
-
-## How to use this template (remove this section)
-
-You can copy this template and use this for your open source project, workshops, hackathons or similar where participants should contribute content. Please update the README and other files depending on your requirements, project description etc. You find various "How Tos" documents if you or your expected contributors are not familar with setting up and working with repositories. Feel free to remove no longer applicable ones for your own repository.
-
-You might want to checkout [makeareadme.com](https://www.makeareadme.com) to gain additional guidance and options for a typical README file.
-
-![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)
-
-**License**: This template is using [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). So you can copy or fork this template without the need to reference. Keep attribution from CODE_OF_CONDUCT as this uses CC-BY-4.0. The license files contained are meant to be used for the final open source project you run.
-
-TODO:
-
-* update readme for your project needs, e.g. use CC0 or CC-BY-4.0 license
-* update LICENSE, [INCLUDE COPYRIGHT INSTANCE] -> e.g. Project XY, CDISC, John Doe
-* update CODE_OF_CONDUCT, [INSERT CONTACT METHOD] -> e.g. <example@example.com>
-* update CONTRIBUTION.md if you want to provide additional rules or guidances, for example naming conventions
-
-*-------------------------- DELETE EVERYTHIG ABOVE ---------------------------*
-
-
-# *NAME* 
-
-This repository should be used for the *Project/Workshop/Hackathon XY* to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
+This is the CDISC 360i repository. It contains code, data files, and technical documentation for the 360i program.  
 
 ## Description
+CDISC 360i is a multi-year initiative with the aim to transform the way we develop and use standards within clinical research creating connected and interoperable information  enabling automation, enhancing data integrity, and accelerating innovation.
 
-The main purpose of *Project Name* is to ....
+Building on the CDISC 360 proof of concept launched a few years ago to gain community involvement, 360i (“i” for Implementation) is designed to close gaps in data standards by adding the required semantic layer to enable end-to-end automation. This initiative facilitates seamless data flow from study design through analysis, helping researchers, sponsors, and regulators drive efficiency, improve data quality, and accelerate research timelines.
 
-If possible use images as well.
+![360i logo](./images/360i-logo.png)
 
-![Image Description](./images/placeholder.png)
+### The Need for Change
+Clinical research today faces significant challenges due to fragmented systems, isolated operational silos and data, and time consuming manual processes that slow decision-making, increase costs, and delay access to life saving therapies. Despite existing data standards, inconsistencies and gaps within and across the standards hinder automation, collaboration, and efficiency. As science progresses, research data and standards are becoming more intricate, and current systems and workflows struggle to keep up. This makes it harder to maintain traceability, integrate information, and respond to modern research needs.
 
-## Contribution
+In a time when speed, precision, and innovation are critical, the current approach simply isn’t sustainable. To advance clinical research, we must adopt a smarter, more connected approach to create a standards-driven, automated workflow that eliminates redundant, manual processes while ensuring clinical data is consistent, traceable, and reusable. By improving efficiency, consistency, and quality of data workflows, this initiative will help reduce time and costs in clinical research and position the industry to handle the growing complexity of modern trials.
 
-Contribution is very welcome. When you contribute to this repository you are doing so under the below licenses. Please checkout [Contribution](CONTRIBUTING.md) for additional information. All contributions must adhere to the following [Code of Conduct](CODE_OF_CONDUCT.md).
+### Key Benefits of a Connected Research Ecosystem: What is 360i’s Value?
+- Patients: Easier access to structured, interpretable data for better engagement
+- Sponsors: Protocol-driven research automating the information pipeline, reducing time to study results, and increasing quality
+- Regulators: Reduced variability and clickable traceability from analysis to the collected data increasing confidence in decisions
+- Researchers: Reduce barriers to entry and cost for standards through ready-to-use, implementable standards and open-source tools
+- Technologists: Provide machine-readable and interoperable inputs and outputs for easier adoption by software solutions
+
+### 360i Goals
+- Define and digitalize end to end standards from study design endpoints through the analyses
+- Leverage those standards to accelerate the study design and build phase of the trial
+- Demonstrate the automated data flow from raw data source to the generation of the targeted result
+
+### What will 360i Deliver?
+1. Standards Packages
+   - Linked and executable metadata from study endpoint through analysis
+   - Includes concepts, rules, & sample data
+2. Implementation Cookbooks
+   -  Instructions to build standards packages
+   -  Recipes to implement packages within your processes
+4. Example Implementations
+   - Technology-enabled example leveraging packages & recipes
+   - Library of community-based open-source tools  
+
+## Contributions
+
+Contributions are welcome. When you contribute to this repository, you are doing so under the licenses below. Please checkout [Contribution](CONTRIBUTING.md) for additional information. All contributions must adhere to the following [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -44,20 +47,16 @@ Contribution is very welcome. When you contribute to this repository you are doi
 
 ### Code & Scripts
 
-This project is using the [MIT](http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative") license (see [`LICENSE`](LICENSE)) for code and scripts.
+This project uses the [MIT](http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative") license (see [`LICENSE`](LICENSE)) for code and scripts.
 
 ### Content
 
-The content files like documentation and minutes are released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). This does not include trademark permissions.
+Content files, like documentation, are released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). This does not include trademark permissions.
 
 ## Re-use
 
-When you re-use the source, keep or copy the license information also in the source code files. When you re-use the source in proprietary software or distribute binaries (derived or underived), copy additionally the license text to a third-party-licenses file or similar.
+When you re-use the source, keep or copy the license information in the source code files. When you re-use the source in proprietary software or distribute binaries (derived or underived), copy the license text to a third-party-licenses file or similar.
 
-When you want to re-use and refer to the content, please do so like the following:
+When you want to re-use and refer to the content, please follow the example below:
 
 > Content based on [Project XY (GitHub)](https://github.com/xy/xy) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
-
-
-
-
