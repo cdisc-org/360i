@@ -7,7 +7,7 @@ CDISC 360i is a multi-year initiative with the aim to transform the way we devel
 
 Building on the CDISC 360 proof of concept launched a few years ago to gain community involvement, 360i (“i” for Implementation) is designed to close gaps in data standards by adding the required semantic layer to enable end-to-end automation. This initiative facilitates seamless data flow from study design through analysis, helping researchers, sponsors, and regulators drive efficiency, improve data quality, and accelerate research timelines.
 
-![360i logo](./images/360i-logo.png)
+![360i logo](./images/360i-logo-sm.png)
 
 ### The Need for Change
 Clinical research today faces significant challenges due to fragmented systems, isolated operational silos and data, and time consuming manual processes that slow decision-making, increase costs, and delay access to life saving therapies. Despite existing data standards, inconsistencies and gaps within and across the standards hinder automation, collaboration, and efficiency. As science progresses, research data and standards are becoming more intricate, and current systems and workflows struggle to keep up. This makes it harder to maintain traceability, integrate information, and respond to modern research needs.
