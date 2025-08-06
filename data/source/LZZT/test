@@ -1,0 +1,120 @@
+{
+  "entry": [
+    {
+      "@xmlns:null": "http://www.w3.org/1999/xhtml",
+      "parsererror@style": "display: block; white-space: pre; border: 2px solid #c77; padding: 0 1em 0 1em; margin: 1em; background-color: #fdd; color: black",
+      "parsererror": [
+        {
+          "@xmlns:null": "http://www.w3.org/1999/xhtml",
+          "h3": "This page contains the following errors:"
+        },
+        {
+          "@xmlns:null": "http://www.w3.org/1999/xhtml",
+          "div@style": "font-family:monospace;font-size:12px",
+          "div": "error on line 46 at column 2: Extra content at the end of the document"
+        },
+        {
+          "@xmlns:null": "http://www.w3.org/1999/xhtml",
+          "h3": "Below is a rendering of the page up to the first error."
+        }
+      ]
+    },
+    {
+      "resource": {
+        "Observation": [
+          {
+            "id@value": "d1e101917"
+          },
+          {
+            "category": {
+              "coding": [
+                {
+                  "system@value": "http://terminology.hl7.org/CodeSystem/observation-category"
+                },
+                {
+                  "code@value": "laboratory"
+                },
+                {
+                  "display@value": "laboratory"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system@value": "http://loinc.org"
+                },
+                {
+                  "code@value": "1975-2"
+                },
+                {
+                  "display@value": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+                }
+              ]
+            }
+          },
+          {
+            "subject": [
+              {
+                "reference@value": "Patient/01-701-1118"
+              },
+              {
+                "display@value": "01-701-1118"
+              }
+            ]
+          },
+          {
+            "effectiveDateTime@value": "2014-02-27T10:32:00"
+          },
+          {
+            "valueQuantity": [
+              {
+                "value@value": "0.7"
+              },
+              {
+                "unit@value": "mg/dL"
+              },
+              {
+                "system@value": "http://unitsofmeasure.org"
+              },
+              {
+                "code@value": "mg/dl"
+              }
+            ]
+          },
+          {
+            "interpretation": {
+              "text@value": "normal"
+            }
+          },
+          {
+            "referenceRange": [
+              {
+                "low": [
+                  {
+                    "value@value": "0.2"
+                  },
+                  {
+                    "unit@value": "mg/dL"
+                  }
+                ]
+              },
+              {
+                "high": [
+                  {
+                    "value@value": "1.2"
+                  },
+                  {
+                    "unit@value": "mg/dL"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
