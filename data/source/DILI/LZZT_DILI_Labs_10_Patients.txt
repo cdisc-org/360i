@@ -1,0 +1,2070 @@
+<entry>
+		<resource>
+			<Observation>
+				<id value="d1e101917"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-02-27T10:32:00"/>
+				<valueQuantity>
+					<value value="0.7"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e101972"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-03-26T10:50:00"/>
+				<valueQuantity>
+					<value value="0.5"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102024"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-04-09T11:01:00"/>
+				<valueQuantity>
+					<value value="0.6"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102076"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-04-23T15:22:00"/>
+				<valueQuantity>
+					<value value="0.5"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102128"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-05-08T09:30:00"/>
+				<valueQuantity>
+					<value value="0.6"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102180"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-06-05T08:14:00"/>
+				<valueQuantity>
+					<value value="0.5"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102233"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-07-02T10:12:00"/>
+				<valueQuantity>
+					<value value="0.6"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102285"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-07-30T13:50:00"/>
+				<valueQuantity>
+					<value value="0.6"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102337"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-08-27T11:27:00"/>
+				<valueQuantity>
+					<value value="0.5"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e102389"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1975-2"/>
+						<display value="Bilirubin.total [Mass/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-09-09T13:28:00"/>
+				<valueQuantity>
+					<value value="0.5"/>
+					<unit value="mg/dL"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="mg/dl"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="0.2"/>
+						<unit value="mg/dL"/>
+					</low>
+					<high>
+						<value value="1.2"/>
+						<unit value="mg/dL"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106274"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-02-27T10:32:00"/>
+				<valueQuantity>
+					<value value="13"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106329"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-03-26T10:50:00"/>
+				<valueQuantity>
+					<value value="13"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106381"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-04-09T11:01:00"/>
+				<valueQuantity>
+					<value value="13"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106433"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-04-23T15:22:00"/>
+				<valueQuantity>
+					<value value="14"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106485"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-05-08T09:30:00"/>
+				<valueQuantity>
+					<value value="18"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106537"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-06-05T08:14:00"/>
+				<valueQuantity>
+					<value value="15"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106590"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-07-02T10:12:00"/>
+				<valueQuantity>
+					<value value="14"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106642"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-07-30T13:50:00"/>
+				<valueQuantity>
+					<value value="15"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106694"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-08-27T11:27:00"/>
+				<valueQuantity>
+					<value value="15"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e106746"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="2324-2"/>
+						<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1118"/>
+					<display value="01-701-1118"/>
+				</subject>
+				<effectiveDateTime value="2014-09-09T13:28:00"/>
+				<valueQuantity>
+					<value value="16"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="10"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="61"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e741"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-05T12:25:00"/>
+				<valueQuantity>
+					<value value="47"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e793"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-26T15:15:00"/>
+				<valueQuantity>
+					<value value="53"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e845"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-07T11:21:00"/>
+				<valueQuantity>
+					<value value="41"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e898"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-21T10:58:00"/>
+				<valueQuantity>
+					<value value="45"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e950"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-06-18T13:00:00"/>
+				<valueQuantity>
+					<value value="46"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1002"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="6768-6"/>
+						<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-07-02T11:45:00"/>
+				<valueQuantity>
+					<value value="44"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="35"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="115"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1054"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2013-12-26T14:45:00"/>
+				<valueQuantity>
+					<value value="27"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1109"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-01-16T13:17:00"/>
+				<valueQuantity>
+					<value value="41"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="high"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1161"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-01-30T08:50:00"/>
+				<valueQuantity>
+					<value value="18"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1214"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-02-12T12:56:00"/>
+				<valueQuantity>
+					<value value="26"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1266"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-05T12:25:00"/>
+				<valueQuantity>
+					<value value="22"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1318"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-26T15:15:00"/>
+				<valueQuantity>
+					<value value="27"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1370"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-07T11:21:00"/>
+				<valueQuantity>
+					<value value="17"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1422"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-21T10:58:00"/>
+				<valueQuantity>
+					<value value="21"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1474"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-06-18T13:00:00"/>
+				<valueQuantity>
+					<value value="23"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1527"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1742-6"/>
+						<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-07-02T11:45:00"/>
+				<valueQuantity>
+					<value value="23"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="6"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1623"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2013-12-26T14:45:00"/>
+				<valueQuantity>
+					<value value="40"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="high"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1678"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-01-16T13:17:00"/>
+				<valueQuantity>
+					<value value="33"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1730"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-01-30T08:50:00"/>
+				<valueQuantity>
+					<value value="21"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1782"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-02-12T12:56:00"/>
+				<valueQuantity>
+					<value value="26"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1835"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-05T12:25:00"/>
+				<valueQuantity>
+					<value value="21"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1887"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-03-26T15:15:00"/>
+				<valueQuantity>
+					<value value="22"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1939"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-07T11:21:00"/>
+				<valueQuantity>
+					<value value="23"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e1991"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-05-21T10:58:00"/>
+				<valueQuantity>
+					<value value="19"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e2043"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-06-18T13:00:00"/>
+				<valueQuantity>
+					<value value="23"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="d1e2095"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="laboratory"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="1920-8"/>
+						<display value="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/01-701-1015"/>
+					<display value="01-701-1015"/>
+				</subject>
+				<effectiveDateTime value="2014-07-02T11:45:00"/>
+				<valueQuantity>
+					<value value="19"/>
+					<unit value="U/L"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="U/l (catalytic or activity) or {Unit}/l (arbitrary)"/>
+				</valueQuantity>
+				<interpretation>
+					<text value="normal"/>
+				</interpretation>
+				<referenceRange>
+					<low>
+						<value value="9"/>
+						<unit value="U/L"/>
+					</low>
+					<high>
+						<value value="34"/>
+						<unit value="U/L"/>
+					</high>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
