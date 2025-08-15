@@ -13,4 +13,3 @@ It is expected that they will also be able to provide Continuous Glucose Monitor
 ## DHT 360i - Glucose Level - CGM - example data 09FEB2024 (2).xlsx
 
 This file provides 7 CGM records for Glucose monitoring.
-
