@@ -174,7 +174,7 @@ qs3 <- bind_rows(qs_scale3, qs_vas3) %>%
     # Add necessary variables
     QSSTRESC = as.character(QSSTRESN),
     QSMETHOD = if_else(QSTESTCD == "EQ5D0206", "VISUAL ANALOG SCALE (0-100)", NA_character_),
-    QSLOBXFL = if_else(VISITNUM == 1, "Y", NA_character_),
+    QSLOBXFL = if_else(VISITNUM == 3, "Y", NA_character_),
     QSSTAT = if_else(is.na(QSSTRESN), "NOT DONE", NA_character_)
   )
 
