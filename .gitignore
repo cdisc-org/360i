@@ -1,0 +1,92 @@
+# Python cache and bytecode
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.dmypy.json
+
+# Lint / type / formatter caches
+.ruff_cache/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Logs and runtime artifacts
+*.log
+
+# OS / IDE noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# SQLite / local DBs
+*.db
+*.sqlite
+
+# Environment variables / secrets (add if created)
+.env
+.env.*
+
+# Generated normalization outputs (optional to ignore)
+normalized/schedule_instances.csv
+normalized/*.json
+
+# If you want to ignore all normalized CSV artifacts uncomment below
+# normalized/*.csv
+
+# Temporary data files
+*.tmp
+*.bak
+
+# Ignore archive datasets unless explicitly tracked
+*.tar
+*.gz
+*.zip
+
+# Profiling
+.prof
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Wheel build artifacts
+*.whl
+
+# Coverage debug
+.cache/
+
+# VSCode Python settings
+.python-version
+
+# App specific
+normalized/
+
+# End of file
