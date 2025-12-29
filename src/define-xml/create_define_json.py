@@ -51,23 +51,23 @@ class USDMDefine360iProcessor:
         cosmosversion (str): CDISC Cosmos API version
     """
     
-    def __init__(self, usdm_file, output_template, sdtmig="3.4", sdtmct=None, 
-                 studyversion=0, studydesign=0, docversion=0, cdisc_api_key=None, 
-                 cosmosversion="v2", debug=False):
+    def __init__(self, usdm_file, output_template, sdtmig, sdtmct, 
+                 studyversion, studydesign, docversion, cdisc_api_key, 
+                 cosmosversion, debug):
         """
         Initialize the USDM processor.
         
         Args:
             usdm_file (str): Path to USDM JSON file
             output_template (str): Path to output Define-360i JSON file
-            sdtmig (str): SDTM Implementation Guide version (default: "3.4")
+            sdtmig (str): SDTM Implementation Guide version
             sdtmct (str): SDTM Controlled Terminology date in yyyy-mm-dd format
-            studyversion (int): Study version index in USDM (default: 0)
-            studydesign (int): Study design index in USDM (default: 0)
-            docversion (int): Document version index in USDM (default: 0)
-            cdisc_api_key (str, optional): CDISC Library API Key
-            debug (bool): Enable debug mode to save intermediate dictionaries (default: False)
-            cosmosversion (str): CDISC Cosmos API version (default: "v2")
+            studyversion (int): Study version index in USDM
+            studydesign (int): Study design index in USDM
+            docversion (int): Document version index in USDM
+            cdisc_api_key (str): CDISC Library API Key (can be None to use environment variable)
+            cosmosversion (str): CDISC Cosmos API version
+            debug (bool): Enable debug mode to save intermediate dictionaries
             
         Raises:
             ValueError: If sdtmct date format is invalid
@@ -130,7 +130,8 @@ class USDMDefine360iProcessor:
         self.vlm_items_by_variable = {}
         
         self.required_variables_exceptions = {
-            "SE": ["ELEMENT"]
+            "SE": ["ELEMENT", "EPOCH"],
+            "SV": ["VISIT", "SVCNTMOD"]
         }
         
         self._extract_usdm_data()
@@ -157,7 +158,7 @@ class USDMDefine360iProcessor:
         except ValueError:
             return False
 
-    def _convert_data_type(self, sdtm_data_type):
+    def _convert_data_type(self, var):
         """
         Convert SDTM data type to Define-XML data type.
         
@@ -169,12 +170,16 @@ class USDMDefine360iProcessor:
         """
         type_mapping = {
             'Char': 'text',
-            'Num': 'float',
-            'Integer': 'integer',
-            'Date': 'text',
-            'DateTime': 'text'
+            'Num': 'integer'
         }
-        return type_mapping.get(sdtm_data_type, 'text')
+
+        # Check variable name suffix for special data types
+        if var['name'].endswith('DTC'):
+            return 'datetime'
+        elif var['name'].endswith('DUR'):
+            return 'durationDatetime'
+        else:
+            return type_mapping.get(var['simpleDatatype'], '????')
     
     def _extract_usdm_data(self):
         """Extract biomedical concepts, eligibility criteria, and study elements from USDM."""
@@ -187,6 +192,15 @@ class USDMDefine360iProcessor:
         expression_elements = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].elements')
         self.elements = expression_elements.evaluate(self.usdm_data)
 
+        expression_encounters = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].encounters')
+        self.encounters = expression_encounters.evaluate(self.usdm_data)
+
+        expression_epochs = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].epochs')
+        self.epochs = expression_epochs.evaluate(self.usdm_data)
+
+        expression_arms = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].arms')
+        self.arms = expression_arms.evaluate(self.usdm_data)
+
     def process_biomedical_concepts(self):
         """
         Process all biomedical concepts from USDM.
@@ -195,6 +209,9 @@ class USDMDefine360iProcessor:
         handler based on concept type (Biomedical Concept vs Dataset Specialization).
         Populates datasets_dict and bc_dict data structures.
         """
+        # Debug: Accumulate all dataset_data for debugging
+        self.all_dataset_data = []
+
         for bc in self.biomedical_concepts:
             bc_data = self.client.get_api_json(f"/cosmos/{self.cosmosversion}" + bc['reference'])
             concept_type = bc_data['_links']['self']['type']
@@ -203,7 +220,7 @@ class USDMDefine360iProcessor:
                 self._process_bc_type(bc, bc_data)
             elif concept_type == "SDTM Dataset Specialization":
                 self._process_dss_type(bc, bc_data)
-    
+                    
     def _process_bc_type(self, bc, bc_data):
         """
         Process 'Biomedical Concept' type concepts.
@@ -215,15 +232,14 @@ class USDMDefine360iProcessor:
             bc_data (dict): Detailed concept data from CDISC Library
         """
         dataset_links = self.client.get_biomedicalconcept_latest_datasetspecializations(self.cosmosversion, bc_data['conceptId'])['sdtm']
-
+        
         for dataset_link in dataset_links:
-            # dataset_data = self.client.get_api_json(f"/cosmos/{self.cosmosversion}" + dataset_link['href'])
             dataset_data = self.client.get_sdtm_latest_sdtm_datasetspecialization(self.cosmosversion, dataset_link['href'].split('/')[-1])
-            
+            self.all_dataset_data.append(dataset_data)
             dataset_name = dataset_data['domain']
             variables = dataset_data.get('variables', [])
             self._process_variables(variables, dataset_name, bc)
-    
+            
     def _process_dss_type(self, bc, bc_data):
         """
         Process 'SDTM Dataset Specialization' type concepts.
@@ -263,7 +279,16 @@ class USDMDefine360iProcessor:
 
             if variable_name and data_element_concept_id:
                 if variable_name not in self.datasets_dict[dataset_name]:
+                    # Create the variable entry
                     self.datasets_dict[dataset_name][variable_name] = {}
+                    
+                    # Add optional fields to the variable
+                    var_fields = ['role', 'dataType', 'length', 'format', 'significantDigits', 'originType', 'originSource']
+                    
+                    for field in var_fields:
+                        value = variable.get(field)
+                        if value is not None:
+                            self.datasets_dict[dataset_name][variable_name][field] = value
 
                 for property in bc['properties']:
                     property_code = property['code']['standardCode']['code']
@@ -279,14 +304,16 @@ class USDMDefine360iProcessor:
                                 if value:
                                     response_codes.append(value['submissionValue'])
                             
-                            if codelist_concept_id not in self.datasets_dict[dataset_name][variable_name]:
-                                self.datasets_dict[dataset_name][variable_name][codelist_concept_id] = []
+                            # Create codelist structure if it doesn't exist
+                            if "codelist" not in self.datasets_dict[dataset_name][variable_name]:
+                                self.datasets_dict[dataset_name][variable_name]["codelist"] = {}
+                            
+                            if codelist_concept_id not in self.datasets_dict[dataset_name][variable_name]["codelist"]:
+                                self.datasets_dict[dataset_name][variable_name]["codelist"][codelist_concept_id] = []
 
-                            self.datasets_dict[dataset_name][variable_name][codelist_concept_id] = list(
-                                set(self.datasets_dict[dataset_name][variable_name][codelist_concept_id] + response_codes)
+                            self.datasets_dict[dataset_name][variable_name]["codelist"][codelist_concept_id] = list(
+                                set(self.datasets_dict[dataset_name][variable_name]["codelist"][codelist_concept_id] + response_codes)
                             )
-                        else:
-                            self.datasets_dict[dataset_name][variable_name] = {}
                         break
     
     def _build_where_clause(self, bc, bc_data, dss_response, dataset_name):
@@ -448,65 +475,65 @@ class USDMDefine360iProcessor:
                     self.vlm_lookup["IEORRES"] = []
                 self.vlm_lookup["IEORRES"].append(ieorres_entry)
         
-        # Add elements VLM entries
-        if self.elements:
-            for element in self.elements:
-                element_name = element.get('name', '')
-                element_label = element.get('label', '')
-                element_description = element.get('description', '')
+        # # Add elements VLM entries
+        # if self.elements:
+        #     for element in self.elements:
+        #         element_name = element.get('name', '')
+        #         element_label = element.get('label', '')
+        #         element_description = element.get('description', '')
                 
-                # Create VLM entry for SESTDTC variable
-                sestdtc_entry = {
-                    "role": "Timing",
-                    "dataType": "datetime",
-                    "length": 19,
-                    "originType": "Collected",
-                    "originSource": "Investigator",
-                    "WhereClause": [
-                        {
-                            "Clause": [
-                                {
-                                    "Dataset": "SE",
-                                    "Variable": "ETCD",
-                                    "item": "IT.SE.ETCD",
-                                    "Comparator": "EQ",
-                                    "Values": [element_name]
-                                }
-                            ]
-                        }
-                    ]
-                }
+        #         # Create VLM entry for SESTDTC variable
+        #         sestdtc_entry = {
+        #             "role": "Timing",
+        #             "dataType": "datetime",
+        #             "length": 19,
+        #             "originType": "Collected",
+        #             "originSource": "Investigator",
+        #             "WhereClause": [
+        #                 {
+        #                     "Clause": [
+        #                         {
+        #                             "Dataset": "SE",
+        #                             "Variable": "ETCD",
+        #                             "item": "IT.SE.ETCD",
+        #                             "Comparator": "EQ",
+        #                             "Values": [element_name]
+        #                         }
+        #                     ]
+        #                 }
+        #             ]
+        #         }
                 
-                # Create VLM entry for SEENDTC variable
-                seendtc_entry = {
-                    "role": "Timing",
-                    "dataType": "datetime",
-                    "length": 19,
-                    "originType": "Collected",
-                    "originSource": "Investigator",
-                    "WhereClause": [
-                        {
-                            "Clause": [
-                                {
-                                    "Dataset": "SE",
-                                    "Variable": "ETCD",
-                                    "item": "IT.SE.ETCD",
-                                    "Comparator": "EQ",
-                                    "Values": [element_name]
-                                }
-                            ]
-                        }
-                    ]
-                }
+        #         # Create VLM entry for SEENDTC variable
+        #         seendtc_entry = {
+        #             "role": "Timing",
+        #             "dataType": "datetime",
+        #             "length": 19,
+        #             "originType": "Collected",
+        #             "originSource": "Investigator",
+        #             "WhereClause": [
+        #                 {
+        #                     "Clause": [
+        #                         {
+        #                             "Dataset": "SE",
+        #                             "Variable": "ETCD",
+        #                             "item": "IT.SE.ETCD",
+        #                             "Comparator": "EQ",
+        #                             "Values": [element_name]
+        #                         }
+        #                     ]
+        #                 }
+        #             ]
+        #         }
                 
-                # Add to vlm_lookup
-                if "SESTDTC" not in self.vlm_lookup:
-                    self.vlm_lookup["SESTDTC"] = []
-                self.vlm_lookup["SESTDTC"].append(sestdtc_entry)
+        #         # Add to vlm_lookup
+        #         if "SESTDTC" not in self.vlm_lookup:
+        #             self.vlm_lookup["SESTDTC"] = []
+        #         self.vlm_lookup["SESTDTC"].append(sestdtc_entry)
                 
-                if "SEENDTC" not in self.vlm_lookup:
-                    self.vlm_lookup["SEENDTC"] = []
-                self.vlm_lookup["SEENDTC"].append(seendtc_entry)
+        #         if "SEENDTC" not in self.vlm_lookup:
+        #             self.vlm_lookup["SEENDTC"] = []
+        #         self.vlm_lookup["SEENDTC"].append(seendtc_entry)
 
     def update_datasets_dict(self):
         """
@@ -518,31 +545,48 @@ class USDMDefine360iProcessor:
         from `bc_dict` into `datasets_dict` for downstream codelist
         restrictions.
         """
+        # Add SV dataset from encounters
+        if self.encounters:
+            if "SV" not in self.datasets_dict:
+                self.datasets_dict["SV"] = {}
+
+                # Add SVCNTMOD values from encounters
+                terms = self.client.get_api_json(f"/mdr/ct/packages/sdtmct-{self.sdtmct}/codelists/C171445")['terms']
+                contact_mode_codes = set()
+                for encounter in self.encounters:
+                    for contact_mode in encounter.get('contactModes', []):
+                        code = contact_mode.get('code', '')
+                        if code:
+                            # Find matching term by conceptId and get submissionValue
+                            term = next((t for t in terms if t.get('conceptId') == code), None)
+                            if term:
+                                submission_value = term.get('submissionValue', '')
+                                if submission_value:
+                                    contact_mode_codes.add(submission_value)
+                
+                if contact_mode_codes:
+                    self.datasets_dict["SV"]["SVCNTMOD"] = {"codelist": {
+                        "C171445": sorted(list(contact_mode_codes))
+                    }}
+            
         # Add IE dataset from eligibility criteria
         if self.eligibility_criteria:
             if "IE" not in self.datasets_dict:
                 self.datasets_dict["IE"] = {}
-            
-            # Add IEORRES variable
-            if "IEORRES" not in self.datasets_dict["IE"]:
-                self.datasets_dict["IE"]["IEORRES"] = {}
-            
-            # Add IESTRESC variable  
-            if "IESTRESC" not in self.datasets_dict["IE"]:
-                self.datasets_dict["IE"]["IESTRESC"] = {}
-        
+                    
         # Add SE dataset from elements
         if self.elements:
             if "SE" not in self.datasets_dict:
                 self.datasets_dict["SE"] = {}
-            
-            # Add SESTDTC variable
-            if "SESTDTC" not in self.datasets_dict["SE"]:
-                self.datasets_dict["SE"]["SESTDTC"] = {}
-            
-            # Add SEENDTC variable  
-            if "SEENDTC" not in self.datasets_dict["SE"]:
-                self.datasets_dict["SE"]["SEENDTC"] = {}
+
+                # Add EPOCH values from epochs
+                if self.epochs:
+                    # Create EPOCH codelist with all epoch labels
+                    self.datasets_dict["SE"]["EPOCH"] = {"codelist": {
+                        "C99079": [
+                            epoch.get('name', '') for epoch in self.epochs if epoch.get('name', '')
+                        ]
+                    }}
         
         variable_values = defaultdict(set)
 
@@ -566,9 +610,9 @@ class USDMDefine360iProcessor:
             if dataset not in self.datasets_dict:
                 self.datasets_dict[dataset] = {}
             if variable not in self.datasets_dict[dataset]:
-                self.datasets_dict[dataset][variable] = {}
-            if codelist_concept_id not in self.datasets_dict[dataset][variable]:
-                self.datasets_dict[dataset][variable][codelist_concept_id] = []
+                self.datasets_dict[dataset][variable] = {"codelist": {}}
+            if codelist_concept_id not in self.datasets_dict[dataset][variable]["codelist"]:
+                self.datasets_dict[dataset][variable]["codelist"][codelist_concept_id] = []
 
             if variable.endswith('TESTCD'):
                 terms = self.client.get_codelist_terms(f"sdtmct-{self.sdtmct}/", codelist_concept_id)
@@ -583,8 +627,8 @@ class USDMDefine360iProcessor:
                 
                 self.test_dict[dataset][variable.replace('TESTCD', 'TEST')] = response_codes
 
-            self.datasets_dict[dataset][variable][codelist_concept_id] = sorted(
-                list(set(self.datasets_dict[dataset][variable][codelist_concept_id]).union(values))
+            self.datasets_dict[dataset][variable]["codelist"][codelist_concept_id] = sorted(
+                list(set(self.datasets_dict[dataset][variable]["codelist"][codelist_concept_id]).union(values))
             )
         
         # Create IE codelists from eligibility criteria
@@ -641,7 +685,7 @@ class USDMDefine360iProcessor:
                 if element_codelist_name not in self.code_lists_map:
                     self.code_lists_map[element_codelist_name] = {
                         "OID": f"CL.{element_codelist_name}",
-                        "name": "Study Element",
+                        "name": "Description of Element",
                         "dataType": "text",
                         "codeListItems": element_terms
                     }
@@ -662,9 +706,38 @@ class USDMDefine360iProcessor:
                 if etcd_codelist_name not in self.code_lists_map:
                     self.code_lists_map[etcd_codelist_name] = {
                         "OID": f"CL.{etcd_codelist_name}",
-                        "name": "Study Element Code",
+                        "name": "Element Code",
                         "dataType": "text",
                         "codeListItems": etcd_terms
+                    }
+
+        # Create EPOCH codelists from epochs
+        if self.epochs:
+            # Create EPOCH codelist with all epoch labels
+            epoch_terms = []
+            for epoch in self.epochs:
+                name = epoch.get('name', '')
+                if name:
+                    term = {"codedValue": name}
+                    
+                    # Add coding if type.code exists
+                    type_code = epoch.get('type', {}).get('code', '')
+                    if type_code:
+                        term["coding"] = {
+                            "code": type_code,
+                            "codeSystem": "nci:ExtCodeID"
+                        }
+                    
+                    epoch_terms.append(term)
+            
+            if epoch_terms:
+                epoch_codelist_name = "EPOCH"
+                if epoch_codelist_name not in self.code_lists_map:
+                    self.code_lists_map[epoch_codelist_name] = {
+                        "OID": f"CL.{epoch_codelist_name}",
+                        "name": "Epoch",
+                        "dataType": "text",
+                        "codeListItems": epoch_terms
                     }
 
     def process_datasets(self):
@@ -720,10 +793,32 @@ class USDMDefine360iProcessor:
                 "mandatory": var['core'] == 'Req',
                 "name": var['name'],
                 "description": var['label'],
-                "role": var['role'],
-                "dataType": self._convert_data_type(var['simpleDatatype'])
+                "role": var['role']
             }
             
+            # Add optional fields from datasets_dict if they exist
+            var_data = self.datasets_dict[dataset].get(var['name'], {})
+
+            if 'dataType' in var_data:
+                item_dict["dataType"] = var_data['dataType']
+            else:
+                item_dict["dataType"] = self._convert_data_type(var)
+                            
+            if 'length' in var_data:
+                item_dict['length'] = var_data['length']
+            
+            if 'format' in var_data:
+                item_dict['displayFormat'] = var_data['format']
+            
+            if 'significantDigits' in var_data:
+                item_dict['significantDigits'] = var_data['significantDigits']
+            
+            if 'originType' in var_data and 'originSource' in var_data:
+                item_dict['origin'] = {
+                    "type": var_data['originType'],
+                    "source": var_data['originSource']
+                }
+
             # Add codelist references for IE variables
             if dataset == "IE":
                 if var['name'] == "IETEST":
@@ -744,7 +839,8 @@ class USDMDefine360iProcessor:
 
             codelist_oid = None
             if var['name'] in variable_list:
-                codelist_oid = self._process_variable_codelist(var, dataset, self.datasets_dict[dataset][var['name']])
+                restriction_data = self.datasets_dict[dataset][var['name']].get('codelist', {})
+                codelist_oid = self._process_variable_codelist(var, dataset, restriction_data)
             else:
                 if '_links' in var and 'codelist' in var['_links']:
                     codelist_oid = self._process_variable_codelist(var, dataset)
@@ -776,26 +872,29 @@ class USDMDefine360iProcessor:
                             if param:
                                 break
                         
-                        # Create VLM item
+                        # Create VLM item with optional fields
                         vlm_item = {
                             "OID": f"IT.{dataset}.{var['name']}.{param}" if param else f"IT.{dataset}.{var['name']}",
                             "mandatory": False,
                             "name": var['name'],
-                            # "dataType": self._convert_data_type(vlm_data.get('dataType', var['simpleDatatype'])),
-                            "dataType": vlm_data.get('dataType', self._convert_data_type(var['simpleDatatype'])),
-                            "applicableWhen": where_clause_oids
+                            "dataType": vlm_data.get('dataType', self._convert_data_type(var))
                         }
                         
-                        # Add optional VLM fields
+                        # Add optional fields
+                        if 'length' in vlm_data:
+                            vlm_item['length'] = vlm_data['length']
                         if 'format' in vlm_data:
                             vlm_item['displayFormat'] = vlm_data['format']
                         if 'significantDigits' in vlm_data:
                             vlm_item['significantDigits'] = vlm_data['significantDigits']
                         if 'originSource' in vlm_data:
                             vlm_item['origin'] = {
-                                'type': vlm_data.get('originType', 'Collected'),
+                                'type': vlm_data['originType'],
                                 'source': vlm_data['originSource']
                             }
+                        
+                        # Add applicableWhen as the last attribute
+                        vlm_item['applicableWhen'] = where_clause_oids
                         
                         # Group VLM items by variable name for slices
                         vlm_key = f"{dataset}.{var['name']}"
@@ -820,18 +919,7 @@ class USDMDefine360iProcessor:
             item_group['slices'] = slices
         
         self.item_groups.append(item_group)
-
-    def save_vlm_lookup(self, output_file="vlm_lookup_temp.json"):
-        """
-        Save the vlm_lookup dictionary to a temporary JSON file.
-        
-        Args:
-            output_file (str): Path to output JSON file (default: "vlm_lookup_temp.json")
-        """
-        with open(output_file, "w") as f:
-            json.dump(self.vlm_lookup, f, indent=2)
-        print(f"VLM lookup saved to: {output_file}")
-    
+   
     def save_debug_files(self, prefix="debug"):
         """
         Save all intermediate dictionaries to JSON files for debugging.
@@ -840,6 +928,7 @@ class USDMDefine360iProcessor:
             prefix (str): Prefix for debug file names (default: "debug")
         """
         debug_data = {
+            "dataset_data": self.all_dataset_data,
             "datasets_dict": self.datasets_dict,
             "bc_dict": self.bc_dict,
             "vlm_lookup": self.vlm_lookup,
@@ -848,7 +937,7 @@ class USDMDefine360iProcessor:
             "code_lists_map": self.code_lists_map,
             "vlm_items_by_variable": self.vlm_items_by_variable
         }
-        
+       
         for name, data in debug_data.items():
             output_file = f"{prefix}_{name}.json"
             with open(output_file, "w") as f:
@@ -870,7 +959,7 @@ class USDMDefine360iProcessor:
         with open(self.output_template, "w") as f:
             f.write(json.dumps(self.template, indent=2))
     
-    def validate_against_schema(self, schema_file="define.yaml", excel_output=None):
+    def validate_against_schema(self, schema_file, excel_output=None):
         """
         Validate the generated Define-360i file against a YAML schema.
         
@@ -879,7 +968,7 @@ class USDMDefine360iProcessor:
         performs basic structural validation otherwise.
         
         Args:
-            schema_file (str): Path to the YAML schema file (default: "define.yaml")
+            schema_file (str): Path to the YAML schema file
             excel_output (str, optional): Path to Excel file for validation report
         
         Returns:
@@ -1475,11 +1564,25 @@ class USDMDefine360iProcessor:
                 if not restriction_list:
                     final_terms = [create_term_dict(term) for term in all_terms]
                 else:
+                    # Find matching terms from standard codelist
                     final_terms = [
                         create_term_dict(term) 
                         for term in all_terms 
                         if term.get("submissionValue") in restriction_list
                     ]
+                    
+                    # Check for non-matching restriction values and add them with codedValue only
+                    matched_values = {term.get("submissionValue") for term in all_terms if term.get("submissionValue") in restriction_list}
+                    unmatched_values = [val for val in restriction_list if val not in matched_values]
+                    
+                    # Add unmatched values with only codedValue
+                    for unmatched_val in unmatched_values:
+                        if unmatched_val:  # Ensure not empty
+                            print(f"⚠️  Codelist '{codelist_data.get('name', codelist_id)}': term '{unmatched_val}' not found in standard codelist - adding with codedValue only")
+                            final_terms.append({
+                                "NCI Term Code": None,
+                                "Term": unmatched_val
+                            })
             
             elif var['name'].endswith('TEST') and dataset in self.test_dict and var['name'] in self.test_dict[dataset]:
                 final_terms = [
@@ -1644,14 +1747,14 @@ def main():
         help="Path to output Define-360i JSON file"
     )
     parser.add_argument(
-        "--sdtmig",
-        default="3.4",
-        help="SDTM Implementation Guide version (default: 3.4)"
-    )
-    parser.add_argument(
         "--sdtmct",
         required=True,
         help="SDTM Controlled Terminology date in yyyy-mm-dd format (required)"
+    )
+    parser.add_argument(
+        "--sdtmig",
+        default="3.4",
+        help="SDTM Implementation Guide version (default: 3.4)"
     )
     parser.add_argument(
         "--studyversion",
@@ -1673,8 +1776,13 @@ def main():
     )
     parser.add_argument(
         "--cdisc_api_key",
-        required=False,
+        default=None,
         help="CDISC Library API Key (optional, defaults to environment variable CDISC_API_KEY)"
+    )
+    parser.add_argument(
+        "--cosmosversion",
+        default="v2",
+        help="CDISC Cosmos API version (default: v2)"
     )
     parser.add_argument(
         "--validate",
@@ -1695,6 +1803,10 @@ def main():
     )
     args = parser.parse_args()
     
+    # Validate conditional requirements
+    if args.validate and not args.validation_report:
+        parser.error("--validation_report is required when --validate is used")
+    
     processor = USDMDefine360iProcessor(
         usdm_file=args.usdm_file,
         output_template=args.output_template,
@@ -1704,6 +1816,7 @@ def main():
         studydesign=args.studydesign,
         docversion=args.docversion,
         cdisc_api_key=args.cdisc_api_key,
+        cosmosversion=args.cosmosversion,
         debug=args.debug
     )
     
