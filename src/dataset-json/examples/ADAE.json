@@ -1,0 +1,402 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:51",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADAE",
+    "records": 0,
+    "name": "ADAE",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADAE.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADAE.SITEID",
+            "name": "SITEID",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADAE.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADAE.TRTA",
+            "name": "TRTA",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADAE.TRTAN",
+            "name": "TRTAN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADAE.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADAE.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.SAFFL",
+            "name": "SAFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.ASTDT",
+            "name": "ASTDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.ASTDTF",
+            "name": "ASTDTF",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.ASTDY",
+            "name": "ASTDY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AENDT",
+            "name": "AENDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AENDY",
+            "name": "AENDY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.ADURN",
+            "name": "ADURN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.ADURU",
+            "name": "ADURU",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADAE.AETERM",
+            "name": "AETERM",
+            "label": "",
+            "dataType": "string",
+            "length": 46
+        },
+        {
+            "itemOID": "ADAE.AELLT",
+            "name": "AELLT",
+            "label": "",
+            "dataType": "string",
+            "length": 46
+        },
+        {
+            "itemOID": "ADAE.AELLTCD",
+            "name": "AELLTCD",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEDECOD",
+            "name": "AEDECOD",
+            "label": "",
+            "dataType": "string",
+            "length": 46
+        },
+        {
+            "itemOID": "ADAE.AEPTCD",
+            "name": "AEPTCD",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEHLT",
+            "name": "AEHLT",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEHLTCD",
+            "name": "AEHLTCD",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEHLGT",
+            "name": "AEHLGT",
+            "label": "",
+            "dataType": "string",
+            "length": 9
+        },
+        {
+            "itemOID": "ADAE.AEHLGTCD",
+            "name": "AEHLGTCD",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEBODSYS",
+            "name": "AEBODSYS",
+            "label": "",
+            "dataType": "string",
+            "length": 67
+        },
+        {
+            "itemOID": "ADAE.AESOC",
+            "name": "AESOC",
+            "label": "",
+            "dataType": "string",
+            "length": 67
+        },
+        {
+            "itemOID": "ADAE.AESOCCD",
+            "name": "AESOCCD",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AESEV",
+            "name": "AESEV",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AESER",
+            "name": "AESER",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESCAN",
+            "name": "AESCAN",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESCONG",
+            "name": "AESCONG",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESDISAB",
+            "name": "AESDISAB",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESDTH",
+            "name": "AESDTH",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESHOSP",
+            "name": "AESHOSP",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESLIFE",
+            "name": "AESLIFE",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AESOD",
+            "name": "AESOD",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AEREL",
+            "name": "AEREL",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.AEACN",
+            "name": "AEACN",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AEOUT",
+            "name": "AEOUT",
+            "label": "",
+            "dataType": "string",
+            "length": 26
+        },
+        {
+            "itemOID": "ADAE.AESEQ",
+            "name": "AESEQ",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADAE.TRTEMFL",
+            "name": "TRTEMFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCCFL",
+            "name": "AOCCFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCCSFL",
+            "name": "AOCCSFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCCPFL",
+            "name": "AOCCPFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCC02FL",
+            "name": "AOCC02FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCC03FL",
+            "name": "AOCC03FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.AOCC04FL",
+            "name": "AOCC04FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADAE.CQ01NAM",
+            "name": "CQ01NAM",
+            "label": "",
+            "dataType": "string",
+            "length": 19
+        },
+        {
+            "itemOID": "ADAE.AOCC01FL",
+            "name": "AOCC01FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        }
+    ],
+    "rows": []
+}

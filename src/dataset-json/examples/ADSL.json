@@ -1,0 +1,354 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:51",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADSL",
+    "records": 0,
+    "name": "ADSL",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADSL.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADSL.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADSL.SUBJID",
+            "name": "SUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADSL.SITEID",
+            "name": "SITEID",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADSL.SITEGR1",
+            "name": "SITEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADSL.ARM",
+            "name": "ARM",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADSL.TRT01P",
+            "name": "TRT01P",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADSL.TRT01PN",
+            "name": "TRT01PN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.TRT01A",
+            "name": "TRT01A",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADSL.TRT01AN",
+            "name": "TRT01AN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.TRTDUR",
+            "name": "TRTDUR",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.AVGDD",
+            "name": "AVGDD",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.CUMDOSE",
+            "name": "CUMDOSE",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADSL.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.AGEU",
+            "name": "AGEU",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADSL.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADSL.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.ETHNIC",
+            "name": "ETHNIC",
+            "label": "",
+            "dataType": "string",
+            "length": 22
+        },
+        {
+            "itemOID": "ADSL.SAFFL",
+            "name": "SAFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.ITTFL",
+            "name": "ITTFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.EFFFL",
+            "name": "EFFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.COMP8FL",
+            "name": "COMP8FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.COMP16FL",
+            "name": "COMP16FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.COMP24FL",
+            "name": "COMP24FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.DISCONFL",
+            "name": "DISCONFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.DSRAEFL",
+            "name": "DSRAEFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.DTHFL",
+            "name": "DTHFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADSL.BMIBL",
+            "name": "BMIBL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.BMIBLGR1",
+            "name": "BMIBLGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 6
+        },
+        {
+            "itemOID": "ADSL.HEIGHTBL",
+            "name": "HEIGHTBL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.WEIGHTBL",
+            "name": "WEIGHTBL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.EDUCLVL",
+            "name": "EDUCLVL",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.DISONSDT",
+            "name": "DISONSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.DURDIS",
+            "name": "DURDIS",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.DURDSGR1",
+            "name": "DURDSGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADSL.VISIT1DT",
+            "name": "VISIT1DT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.RFSTDTC",
+            "name": "RFSTDTC",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADSL.RFENDTC",
+            "name": "RFENDTC",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADSL.VISNUMEN",
+            "name": "VISNUMEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.RFENDT",
+            "name": "RFENDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADSL.DCDECOD",
+            "name": "DCDECOD",
+            "label": "",
+            "dataType": "string",
+            "length": 27
+        },
+        {
+            "itemOID": "ADSL.DCREASCD",
+            "name": "DCREASCD",
+            "label": "",
+            "dataType": "string",
+            "length": 18
+        },
+        {
+            "itemOID": "ADSL.MMSETOT",
+            "name": "MMSETOT",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        }
+    ],
+    "rows": []
+}
