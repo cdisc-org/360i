@@ -1,0 +1,317 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:51",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADLBHY",
+    "records": 0,
+    "name": "ADLBHY",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADLBHY.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADLBHY.SUBJID",
+            "name": "SUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADLBHY.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADLBHY.TRTP",
+            "name": "TRTP",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADLBHY.TRTPN",
+            "name": "TRTPN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.TRTA",
+            "name": "TRTA",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADLBHY.TRTAN",
+            "name": "TRTAN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADLBHY.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADLBHY.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.COMP24FL",
+            "name": "COMP24FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.DSRAEFL",
+            "name": "DSRAEFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.SAFFL",
+            "name": "SAFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.AVISIT",
+            "name": "AVISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 16
+        },
+        {
+            "itemOID": "ADLBHY.AVISITN",
+            "name": "AVISITN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.ADY",
+            "name": "ADY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.ADT",
+            "name": "ADT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.VISIT",
+            "name": "VISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 19
+        },
+        {
+            "itemOID": "ADLBHY.VISITNUM",
+            "name": "VISITNUM",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.PARAMTYP",
+            "name": "PARAMTYP",
+            "label": "",
+            "dataType": "string",
+            "length": 7
+        },
+        {
+            "itemOID": "ADLBHY.PARAM",
+            "name": "PARAM",
+            "label": "",
+            "dataType": "string",
+            "length": 100
+        },
+        {
+            "itemOID": "ADLBHY.PARAMCD",
+            "name": "PARAMCD",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.PARAMN",
+            "name": "PARAMN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.PARCAT1",
+            "name": "PARCAT1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADLBHY.AVAL",
+            "name": "AVAL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.BASE",
+            "name": "BASE",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.A1LO",
+            "name": "A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.A1HI",
+            "name": "A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.R2A1LO",
+            "name": "R2A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.R2A1HI",
+            "name": "R2A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.BR2A1LO",
+            "name": "BR2A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.BR2A1HI",
+            "name": "BR2A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.ABLFL",
+            "name": "ABLFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.SHIFT1",
+            "name": "SHIFT1",
+            "label": "",
+            "dataType": "string",
+            "length": 16
+        },
+        {
+            "itemOID": "ADLBHY.SHIFT1N",
+            "name": "SHIFT1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBHY.CRIT1",
+            "name": "CRIT1",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADLBHY.CRIT1FL",
+            "name": "CRIT1FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBHY.CRIT1FN",
+            "name": "CRIT1FN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        }
+    ],
+    "rows": []
+}

@@ -1,0 +1,268 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:51",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADQSCIBC",
+    "records": 0,
+    "name": "ADQSCIBC",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADQSCIBC.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADQSCIBC.SITEID",
+            "name": "SITEID",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADQSCIBC.SITEGR1",
+            "name": "SITEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADQSCIBC.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADQSCIBC.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.TRTP",
+            "name": "TRTP",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADQSCIBC.TRTPN",
+            "name": "TRTPN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADQSCIBC.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADQSCIBC.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSCIBC.ITTFL",
+            "name": "ITTFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSCIBC.EFFFL",
+            "name": "EFFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSCIBC.COMP24FL",
+            "name": "COMP24FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSCIBC.AVISIT",
+            "name": "AVISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 16
+        },
+        {
+            "itemOID": "ADQSCIBC.AVISITN",
+            "name": "AVISITN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.VISIT",
+            "name": "VISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 19
+        },
+        {
+            "itemOID": "ADQSCIBC.VISITNUM",
+            "name": "VISITNUM",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.ADY",
+            "name": "ADY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.ADT",
+            "name": "ADT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.PARAMCD",
+            "name": "PARAMCD",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.PARAM",
+            "name": "PARAM",
+            "label": "",
+            "dataType": "string",
+            "length": 100
+        },
+        {
+            "itemOID": "ADQSCIBC.PARAMN",
+            "name": "PARAMN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AVAL",
+            "name": "AVAL",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.ANL01FL",
+            "name": "ANL01FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSCIBC.DTYPE",
+            "name": "DTYPE",
+            "label": "",
+            "dataType": "string",
+            "length": 7
+        },
+        {
+            "itemOID": "ADQSCIBC.AWRANGE",
+            "name": "AWRANGE",
+            "label": "",
+            "dataType": "string",
+            "length": 9
+        },
+        {
+            "itemOID": "ADQSCIBC.AWTARGET",
+            "name": "AWTARGET",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AWTDIFF",
+            "name": "AWTDIFF",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AWLO",
+            "name": "AWLO",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AWHI",
+            "name": "AWHI",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSCIBC.AWU",
+            "name": "AWU",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADQSCIBC.QSSEQ",
+            "name": "QSSEQ",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        }
+    ],
+    "rows": []
+}

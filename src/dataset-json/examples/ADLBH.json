@@ -1,0 +1,338 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:51",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADLBH",
+    "records": 0,
+    "name": "ADLBH",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADLBH.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADLBH.SUBJID",
+            "name": "SUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADLBH.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADLBH.TRTP",
+            "name": "TRTP",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADLBH.TRTPN",
+            "name": "TRTPN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.TRTA",
+            "name": "TRTA",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADLBH.TRTAN",
+            "name": "TRTAN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADLBH.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADLBH.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.COMP24FL",
+            "name": "COMP24FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.DSRAEFL",
+            "name": "DSRAEFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.SAFFL",
+            "name": "SAFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.AVISIT",
+            "name": "AVISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 16
+        },
+        {
+            "itemOID": "ADLBH.AVISITN",
+            "name": "AVISITN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.ADY",
+            "name": "ADY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.ADT",
+            "name": "ADT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.VISIT",
+            "name": "VISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 19
+        },
+        {
+            "itemOID": "ADLBH.VISITNUM",
+            "name": "VISITNUM",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.PARAM",
+            "name": "PARAM",
+            "label": "",
+            "dataType": "string",
+            "length": 100
+        },
+        {
+            "itemOID": "ADLBH.PARAMCD",
+            "name": "PARAMCD",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.PARAMN",
+            "name": "PARAMN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.PARCAT1",
+            "name": "PARCAT1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADLBH.AVAL",
+            "name": "AVAL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.BASE",
+            "name": "BASE",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.CHG",
+            "name": "CHG",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.A1LO",
+            "name": "A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.A1HI",
+            "name": "A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.R2A1LO",
+            "name": "R2A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.R2A1HI",
+            "name": "R2A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.BR2A1LO",
+            "name": "BR2A1LO",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.BR2A1HI",
+            "name": "BR2A1HI",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.ANL01FL",
+            "name": "ANL01FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.ALBTRVAL",
+            "name": "ALBTRVAL",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.ANRIND",
+            "name": "ANRIND",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.BNRIND",
+            "name": "BNRIND",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.ABLFL",
+            "name": "ABLFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.AENTMTFL",
+            "name": "AENTMTFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADLBH.LBSEQ",
+            "name": "LBSEQ",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.LBNRIND",
+            "name": "LBNRIND",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADLBH.LBSTRESN",
+            "name": "LBSTRESN",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        }
+    ],
+    "rows": []
+}

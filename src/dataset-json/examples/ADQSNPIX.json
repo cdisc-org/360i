@@ -1,0 +1,303 @@
+{
+    "datasetJSONCreationDateTime": "2025-12-29T08:08:52",
+    "datasetJSONVersion": "1.1.0",
+    "studyOID": "CDISCPILOT01",
+    "metaDataVersionOID": "CDISC.ADaM.2.1",
+    "itemGroupOID": "ADQSNPIX",
+    "records": 0,
+    "name": "ADQSNPIX",
+    "label": "",
+    "columns": [
+        {
+            "itemOID": "ADQSNPIX.STUDYID",
+            "name": "STUDYID",
+            "label": "",
+            "dataType": "string",
+            "length": 12
+        },
+        {
+            "itemOID": "ADQSNPIX.SITEID",
+            "name": "SITEID",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADQSNPIX.SITEGR1",
+            "name": "SITEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 3
+        },
+        {
+            "itemOID": "ADQSNPIX.USUBJID",
+            "name": "USUBJID",
+            "label": "",
+            "dataType": "string",
+            "length": 11
+        },
+        {
+            "itemOID": "ADQSNPIX.TRTSDT",
+            "name": "TRTSDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.TRTEDT",
+            "name": "TRTEDT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.TRTP",
+            "name": "TRTP",
+            "label": "",
+            "dataType": "string",
+            "length": 20
+        },
+        {
+            "itemOID": "ADQSNPIX.TRTPN",
+            "name": "TRTPN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AGE",
+            "name": "AGE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AGEGR1",
+            "name": "AGEGR1",
+            "label": "",
+            "dataType": "string",
+            "length": 5
+        },
+        {
+            "itemOID": "ADQSNPIX.AGEGR1N",
+            "name": "AGEGR1N",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.RACE",
+            "name": "RACE",
+            "label": "",
+            "dataType": "string",
+            "length": 32
+        },
+        {
+            "itemOID": "ADQSNPIX.RACEN",
+            "name": "RACEN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.SEX",
+            "name": "SEX",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.ITTFL",
+            "name": "ITTFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.EFFFL",
+            "name": "EFFFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.COMP24FL",
+            "name": "COMP24FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.AVISIT",
+            "name": "AVISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 16
+        },
+        {
+            "itemOID": "ADQSNPIX.AVISITN",
+            "name": "AVISITN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.ADY",
+            "name": "ADY",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.ADT",
+            "name": "ADT",
+            "label": "",
+            "dataType": "date",
+            "targetDataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.VISITNUM",
+            "name": "VISITNUM",
+            "label": "",
+            "dataType": "float",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.VISIT",
+            "name": "VISIT",
+            "label": "",
+            "dataType": "string",
+            "length": 19
+        },
+        {
+            "itemOID": "ADQSNPIX.PARAM",
+            "name": "PARAM",
+            "label": "",
+            "dataType": "string",
+            "length": 100
+        },
+        {
+            "itemOID": "ADQSNPIX.PARAMCD",
+            "name": "PARAMCD",
+            "label": "",
+            "dataType": "string",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.PARAMN",
+            "name": "PARAMN",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.PARAMTYP",
+            "name": "PARAMTYP",
+            "label": "",
+            "dataType": "string",
+            "length": 7
+        },
+        {
+            "itemOID": "ADQSNPIX.AVAL",
+            "name": "AVAL",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.BASE",
+            "name": "BASE",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.CHG",
+            "name": "CHG",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.PCHG",
+            "name": "PCHG",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.ABLFL",
+            "name": "ABLFL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.ANL01FL",
+            "name": "ANL01FL",
+            "label": "",
+            "dataType": "string",
+            "length": 1
+        },
+        {
+            "itemOID": "ADQSNPIX.DTYPE",
+            "name": "DTYPE",
+            "label": "",
+            "dataType": "string",
+            "length": 7
+        },
+        {
+            "itemOID": "ADQSNPIX.AWRANGE",
+            "name": "AWRANGE",
+            "label": "",
+            "dataType": "string",
+            "length": 9
+        },
+        {
+            "itemOID": "ADQSNPIX.AWTARGET",
+            "name": "AWTARGET",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AWTDIFF",
+            "name": "AWTDIFF",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AWLO",
+            "name": "AWLO",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AWHI",
+            "name": "AWHI",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        },
+        {
+            "itemOID": "ADQSNPIX.AWU",
+            "name": "AWU",
+            "label": "",
+            "dataType": "string",
+            "length": 4
+        },
+        {
+            "itemOID": "ADQSNPIX.QSSEQ",
+            "name": "QSSEQ",
+            "label": "",
+            "dataType": "integer",
+            "length": 8
+        }
+    ],
+    "rows": []
+}
