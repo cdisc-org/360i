@@ -130,6 +130,8 @@ class USDMDefine360iProcessor:
         self.vlm_items_by_variable = {}
         
         self.required_variables_exceptions = {
+            "TA": ["ELEMENT"],
+            "TV": ["VISITDY", "ARM", "TVENRL"],
             "SE": ["ELEMENT", "EPOCH"],
             "SV": ["VISIT", "SVCNTMOD"]
         }
@@ -545,6 +547,35 @@ class USDMDefine360iProcessor:
         from `bc_dict` into `datasets_dict` for downstream codelist
         restrictions.
         """
+        # Add TA dataset from arms
+        if self.arms:
+            if "TA" not in self.datasets_dict:
+                self.datasets_dict["TA"] = {}
+
+                # Add EPOCH values from epochs
+                if self.epochs:
+                    # Create EPOCH codelist with all epoch labels
+                    self.datasets_dict["TA"]["EPOCH"] = {"codelist": {
+                        "C99079": [
+                            epoch.get('name', '') for epoch in self.epochs if epoch.get('name', '')
+                        ]
+                    }}
+
+        # Add TE dataset from elements
+        if self.elements:
+            if "TE" not in self.datasets_dict:
+                self.datasets_dict["TE"] = {}
+
+        # Add TI dataset from eligibility criteria
+        if self.eligibility_criteria:
+            if "TI" not in self.datasets_dict:
+                self.datasets_dict["TI"] = {}
+
+        # Add TV dataset from eligibility criteria
+        if self.eligibility_criteria:
+            if "TV" not in self.datasets_dict:
+                self.datasets_dict["TV"] = {}
+
         # Add SV dataset from encounters
         if self.encounters:
             if "SV" not in self.datasets_dict:
@@ -631,6 +662,44 @@ class USDMDefine360iProcessor:
                 list(set(self.datasets_dict[dataset][variable]["codelist"][codelist_concept_id]).union(values))
             )
         
+        # Create ARMCD codelists from arms
+        if self.arms:
+            # Create ARMCD codelist with all arms name
+            armcd_terms = []
+            for arm in self.arms:
+                name = arm.get('name', '')
+                if name:
+                    armcd_terms.append({"codedValue": name})
+            
+            if armcd_terms:
+                armcd_codelist_name = "ARMCD"
+                if armcd_codelist_name not in self.code_lists_map:
+                    self.code_lists_map[armcd_codelist_name] = {
+                        "OID": f"CL.{armcd_codelist_name}",
+                        "name": "ARM Code",
+                        "dataType": "text",
+                        "codeListItems": armcd_terms
+                    }
+
+            # Create ARM codelist with all arms name
+            arm_terms = []
+            for arm in self.arms:
+                label = arm.get('name', '')
+                if name:
+                    arm_terms.append({"codedValue": label})
+            
+            if arm_terms:
+                arm_codelist_name = "ARM"
+                if arm_codelist_name not in self.code_lists_map:
+                    self.code_lists_map[arm_codelist_name] = {
+                        "OID": f"CL.{arm_codelist_name}",
+                        "name": "ARM",
+                        "dataType": "text",
+                        "codeListItems": arm_terms
+                    }
+
+
+
         # Create IE codelists from eligibility criteria
         if self.eligibility_criteria:
             # Create IETEST codelist with all eligibility criterion labels
@@ -737,7 +806,8 @@ class USDMDefine360iProcessor:
                         "OID": f"CL.{epoch_codelist_name}",
                         "name": "Epoch",
                         "dataType": "text",
-                        "codeListItems": epoch_terms
+                        "standard": "ST.SDTMCT",
+                        "codeListItems": epoch_terms,
                     }
 
     def process_datasets(self):
@@ -782,7 +852,8 @@ class USDMDefine360iProcessor:
             "purpose": "Tabulation",
             "structure": dataset_data['datasetStructure'],
             "isReferenceData": (dataset_data.get('_links', {}).get('parentClass', {}).get('title') == "Trial Design") or not any(v.get('name') in ("USUBJID", "POOLID") for v in all_vars),
-            "wasDerivedFrom": "ST.SDTMIG",
+            # Here are we always sure to use ST.SDTMIG?
+            "standard": "ST.SDTMIG",
             "items": []
         }
 
@@ -819,6 +890,49 @@ class USDMDefine360iProcessor:
                     "source": var_data['originSource']
                 }
 
+            # Add codelist references for TA variables
+            if dataset == "TA":
+                if var['name'] == "ARMCD":
+                    if "ARMCD" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ARMCD"]["OID"]
+                elif var['name'] == "ARM":
+                    if "ARM" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ARM"]["OID"]
+                elif var['name'] == "ELEMENT":
+                    if "ELEMENT" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ELEMENT"]["OID"]
+                elif var['name'] == "ETCD":
+                    if "ETCD" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ETCD"]["OID"]
+
+            # Add codelist references for TE variables
+            if dataset == "TE":
+                if var['name'] == "ELEMENT":
+                    if "ELEMENT" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ELEMENT"]["OID"]
+                elif var['name'] == "ETCD":
+                    if "ETCD" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ETCD"]["OID"]
+
+
+            # Add codelist references for TI variables
+            if dataset == "TI":
+                if var['name'] == "IETEST":
+                    if "IETEST" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["IETEST"]["OID"]
+                elif var['name'] == "IETESTCD":
+                    if "IETESTCD" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["IETESTCD"]["OID"]
+
+            # Add codelist references for TV variables
+            if dataset == "TV":
+                if var['name'] == "ARMCD":
+                    if "ARMCD" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ARMCD"]["OID"]
+                elif var['name'] == "ARM":
+                    if "ARM" in self.code_lists_map:
+                        item_dict['codeList'] = self.code_lists_map["ARM"]["OID"]
+            
             # Add codelist references for IE variables
             if dataset == "IE":
                 if var['name'] == "IETEST":
@@ -1619,7 +1733,8 @@ class USDMDefine360iProcessor:
                 codelist_dict = {
                     "OID": oid,
                     "name": name,
-                    "dataType": "text"
+                    "dataType": "text",
+                    "standard": "ST.SDTMCT",
                 }
                 
                 # Add coding if NCI Codelist Code exists
