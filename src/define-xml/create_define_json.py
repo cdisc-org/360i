@@ -16,6 +16,7 @@ import os
 import argparse
 import hashlib
 import yaml
+import copy
 from jsonata import Jsonata
 from cdisc_library_client import CDISCLibraryClient
 from collections import defaultdict
@@ -202,6 +203,12 @@ class USDMDefine360iProcessor:
 
         expression_arms = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].arms')
         self.arms = expression_arms.evaluate(self.usdm_data)
+
+        expression_characteristics = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].characteristics')
+        self.characteristics = expression_characteristics.evaluate(self.usdm_data)
+
+        expression_population = Jsonata(f'study.versions["{self.studyversion}"].studyDesigns["{self.studydesign}"].population')
+        self.population = expression_population.evaluate(self.usdm_data)
 
     def process_biomedical_concepts(self):
         """
@@ -477,6 +484,81 @@ class USDMDefine360iProcessor:
                     self.vlm_lookup["IEORRES"] = []
                 self.vlm_lookup["IEORRES"].append(ieorres_entry)
         
+        # Add VLM entries for TS domain
+        self.vlm_lookup["TSPARMCD"] = []
+
+        # ADAPT
+        if self.characteristics:
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 1,
+                "codeList": "CL.YN",
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["ADAPT"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
+
+        # AGEMIN
+        if self.population["plannedAge"]["minValue"]["value"] is not None:
+            tsparmcd_entry = {
+                "dataType": "integer",
+                "length": 8,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["AGEMIN"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
+
+        # AGEMAX
+        if self.population["plannedAge"]["maxValue"]["value"] is not None:
+            tsparmcd_entry = {
+                "dataType": "integer",
+                "length": 8,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["AGEMAX"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
+
+
+
         # # Add elements VLM entries
         # if self.elements:
         #     for element in self.elements:
@@ -547,6 +629,10 @@ class USDMDefine360iProcessor:
         from `bc_dict` into `datasets_dict` for downstream codelist
         restrictions.
         """
+        # Add TS dataset
+        if "TS" not in self.datasets_dict:
+            self.datasets_dict["TS"] = {}
+        
         # Add TA dataset from arms
         if self.arms:
             if "TA" not in self.datasets_dict:
@@ -1001,6 +1087,8 @@ class USDMDefine360iProcessor:
                             vlm_item['displayFormat'] = vlm_data['format']
                         if 'significantDigits' in vlm_data:
                             vlm_item['significantDigits'] = vlm_data['significantDigits']
+                        if 'codeList' in vlm_data:
+                            vlm_item['codeList'] = vlm_data['codeList']
                         if 'originSource' in vlm_data:
                             vlm_item['origin'] = {
                                 'type': vlm_data['originType'],
