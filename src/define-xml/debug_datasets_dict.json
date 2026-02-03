@@ -1,0 +1,1469 @@
+{
+  "DS": {
+    "DSCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "DSDECOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C114118": [],
+        "C66727": [],
+        "C150811": []
+      }
+    },
+    "DSTERM": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "DSSTDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "DSSCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    }
+  },
+  "DM": {
+    "SEX": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66731": [
+          "F",
+          "M"
+        ]
+      }
+    },
+    "DMDTC": {
+      "role": "Timing",
+      "dataType": "datetime"
+    },
+    "RACE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C74457": []
+      }
+    },
+    "ETHNIC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66790": []
+      }
+    },
+    "AGE": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 6,
+      "format": "3.2",
+      "significantDigits": 2,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AGEU": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66781": []
+      }
+    }
+  },
+  "SC": {
+    "SCORRES": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SCSTRESC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SCSTRESN": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SCDTC": {
+      "role": "Timing"
+    },
+    "SCORRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": []
+      }
+    },
+    "SCSTRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": []
+      }
+    },
+    "SCTESTCD": {
+      "codelist": {
+        "C74559": [
+          "EDULEVEL",
+          "EDUYRNUM"
+        ]
+      }
+    }
+  },
+  "MH": {
+    "MHTERM": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "MHDECOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "MHPRESP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "MHOCCUR": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "MHENRF": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "MHENRTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "MHENTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    }
+  },
+  "SU": {
+    "SUTRT": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SUCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUSCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUPRESP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C66742": [
+          "Y"
+        ]
+      }
+    },
+    "SUOCCUR": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "SUDOSE": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 12,
+      "format": "12.4",
+      "significantDigits": 4,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SUDOSTXT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SUDOSU": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C71620": [
+          "g",
+          "mg",
+          "oz",
+          "CIGAR",
+          "PACK",
+          "L",
+          "DRINK",
+          "mL",
+          "PIPE",
+          "CIGARETTE",
+          "GLASS"
+        ]
+      }
+    },
+    "SUDOSFRQ": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C71113": [
+          "QD",
+          "Q7D"
+        ]
+      }
+    },
+    "SUSTDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SUENDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "SUSTRF": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUSTRTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUSTTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUENRF": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUENRTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUENTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "SUDUR": {
+      "role": "Timing",
+      "dataType": "durationDatetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    }
+  },
+  "PR": {
+    "PRTRT": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "PRDECOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C101858": []
+      }
+    },
+    "PRCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "PRSCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "PRPRESP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C66742": [
+          "Y"
+        ]
+      }
+    },
+    "PROCCUR": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "PRLOC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C74456": []
+      }
+    },
+    "PRSTDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "PRENDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    }
+  },
+  "VS": {
+    "VSORRES": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 8,
+      "format": "8.3",
+      "significantDigits": 3,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "VSORRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C66770": [
+          "g",
+          "kg",
+          "m",
+          "K",
+          "C",
+          "LB",
+          "cm",
+          "in",
+          "F"
+        ],
+        "C71620": [
+          "kg/m2",
+          "psi"
+        ]
+      }
+    },
+    "VSSTRESC": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 8,
+      "format": "8.3",
+      "significantDigits": 3
+    },
+    "VSSTRESN": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 8,
+      "format": "8.3",
+      "significantDigits": 3
+    },
+    "VSSTRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C66770": [
+          "g",
+          "kg/m2",
+          "kg",
+          "m",
+          "K",
+          "C",
+          "LB",
+          "cm",
+          "in",
+          "F"
+        ]
+      }
+    },
+    "VSLOC": {
+      "role": "Qualifier",
+      "codelist": {
+        "C74456": [
+          "AXILLA",
+          "BRACHIAL ARTERY",
+          "CAROTID ARTERY",
+          "CEREBRAL ARTERY",
+          "DORSALIS PEDIS ARTERY",
+          "EAR",
+          "FEMORAL ARTERY",
+          "FINGER",
+          "FOREHEAD",
+          "ORAL CAVITY",
+          "RADIAL ARTERY",
+          "RECTUM"
+        ]
+      }
+    },
+    "VSDTC": {
+      "role": "Timing"
+    },
+    "VSPOS": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71148": [
+          "PRONE",
+          "SEMI-RECUMBENT",
+          "SITTING",
+          "STANDING",
+          "SUPINE"
+        ]
+      }
+    },
+    "VSLAT": {
+      "role": "Qualifier",
+      "codelist": {
+        "C99073": [
+          "LEFT",
+          "RIGHT"
+        ]
+      }
+    },
+    "VSTESTCD": {
+      "codelist": {
+        "C66741": [
+          "BMI",
+          "DIABP",
+          "HEIGHT",
+          "HR",
+          "PULSE",
+          "RESP",
+          "SYSBP",
+          "TEMP",
+          "WEIGHT"
+        ]
+      }
+    }
+  },
+  "EG": {
+    "EGORRES": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Collected",
+      "codelist": {
+        "C101834": []
+      }
+    },
+    "EGSTRESC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20,
+      "codelist": {
+        "C101834": [],
+        "C71150": []
+      }
+    },
+    "EGCAT": {
+      "role": "Qualifier"
+    },
+    "EGMETHOD": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71151": []
+      }
+    },
+    "EGEVAL": {
+      "role": "Qualifier",
+      "codelist": {
+        "C78735": [
+          "ADJUDICATION COMMITTEE",
+          "INDEPENDENT ASSESSOR",
+          "INVESTIGATOR",
+          "VENDOR"
+        ]
+      }
+    },
+    "EGCLSIG": {
+      "role": "Qualifier",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "EGDTC": {
+      "role": "Timing"
+    },
+    "EGPOS": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71148": []
+      }
+    },
+    "EGORRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": [
+          "ms",
+          "s"
+        ]
+      }
+    },
+    "EGSTRESN": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 8,
+      "format": "8.3",
+      "significantDigits": 3,
+      "originType": "Collected"
+    },
+    "EGSTRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": [
+          "ms",
+          "s"
+        ]
+      }
+    },
+    "EGENDTC": {
+      "role": "Timing"
+    },
+    "EGTESTCD": {
+      "codelist": {
+        "C71153": [
+          "AVCOND",
+          "AXISVOLT",
+          "CHYPTENL",
+          "EGHRMN",
+          "INTP",
+          "IVTIACD",
+          "PACEMAKR",
+          "PRAG",
+          "QRSAG",
+          "QRS_AXIS",
+          "QTAG",
+          "QTCBAG",
+          "QTCFAG",
+          "RHYNOS",
+          "RRAG",
+          "SNRARRY",
+          "SPRARRY",
+          "SPRTARRY",
+          "TECHQUAL",
+          "VTARRY",
+          "VTTARRY"
+        ]
+      }
+    }
+  },
+  "CM": {
+    "CMTRT": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "CMDECOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "CMCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "CMSCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "CMPRESP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C66742": []
+      }
+    },
+    "CMOCCUR": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": []
+      }
+    },
+    "CMINDC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "CMDOSE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "CMDOSU": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C71620": []
+      }
+    },
+    "CMDOSFRM": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 40,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66726": []
+      }
+    },
+    "CMROUTE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66729": []
+      }
+    },
+    "CMSTDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "CMENDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    }
+  },
+  "LB": {
+    "LBORRES": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 12,
+      "format": "12.4",
+      "significantDigits": 4,
+      "originType": "Collected",
+      "originSource": "Vendor"
+    },
+    "LBORRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": [
+          "mEq/dL",
+          "ug/dL",
+          "g/L",
+          "umol/L",
+          "ng/dL",
+          "pmol/L",
+          "IU/L",
+          "ukat/L",
+          "10^12/L",
+          "nkat/L",
+          "mIU/L",
+          "10^6/L",
+          "pg",
+          "mU/L",
+          "fraction of 1",
+          "nmol/L",
+          "ug/L",
+          "ng/L",
+          "U/L",
+          "EU",
+          "fmol",
+          "mEq/L",
+          "%",
+          "g/dL",
+          "10^9/L",
+          "mg/dL",
+          "mmol/L",
+          "mg/L"
+        ]
+      }
+    },
+    "LBSTRESC": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 12,
+      "format": "12.4",
+      "significantDigits": 4,
+      "originType": "Collected",
+      "originSource": "Vendor"
+    },
+    "LBSTRESN": {
+      "role": "Qualifier",
+      "dataType": "float",
+      "length": 12,
+      "format": "12.4",
+      "significantDigits": 4,
+      "originType": "Collected",
+      "originSource": "Vendor"
+    },
+    "LBSTRESU": {
+      "role": "Qualifier",
+      "codelist": {
+        "C71620": [
+          "mEq/dL",
+          "ug/dL",
+          "g/L",
+          "umol/L",
+          "ng/dL",
+          "pmol/L",
+          "IU/L",
+          "ukat/L",
+          "10^12/L",
+          "nkat/L",
+          "mIU/L",
+          "10^6/L",
+          "pg",
+          "mU/L",
+          "fraction of 1",
+          "nmol/L",
+          "ug/L",
+          "ng/L",
+          "U/L",
+          "EU",
+          "fmol",
+          "mEq/L",
+          "%",
+          "g/dL",
+          "10^9/L",
+          "mg/dL",
+          "mmol/L",
+          "mg/L"
+        ]
+      }
+    },
+    "LBSPEC": {
+      "role": "Qualifier",
+      "codelist": {
+        "C78734": [
+          "BLOOD",
+          "ERYTHROCYTES",
+          "SERUM OR PLASMA",
+          "STOOL",
+          "URINE",
+          "URINE SEDIMENT"
+        ]
+      }
+    },
+    "LBMETHOD": {
+      "role": "Qualifier",
+      "codelist": {
+        "C85492": [
+          "DIPSTICK MEASUREMENT METHOD"
+        ]
+      }
+    },
+    "LBFAST": {
+      "role": "Qualifier",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "LBDTC": {
+      "role": "Timing"
+    },
+    "LBTESTCD": {
+      "codelist": {
+        "C65047": [
+          "ALB",
+          "ALP",
+          "ALT",
+          "ANISO",
+          "AST",
+          "BASO",
+          "BICARB",
+          "BILI",
+          "CA",
+          "CHOL",
+          "CL",
+          "COLOR",
+          "CREAT",
+          "EOS",
+          "GGT",
+          "GLUC",
+          "HBA1C",
+          "HBA1CHGB",
+          "HCT",
+          "HGB",
+          "K",
+          "KETONES",
+          "MACROCY",
+          "MCH",
+          "MCHC",
+          "MCV",
+          "MICROCY",
+          "MONO",
+          "NEUT",
+          "NEUTB",
+          "NEUTSG",
+          "NITRITE",
+          "OCCBLD",
+          "PHOS",
+          "PLAT",
+          "POIKILO",
+          "POLYCHR",
+          "PROT",
+          "RBC",
+          "SODIUM",
+          "SPGRAV",
+          "T3",
+          "T3UP",
+          "T4FR",
+          "T4FRIDX",
+          "TSH",
+          "URATE",
+          "UREAN",
+          "UROBIL",
+          "VITB12",
+          "VITB9",
+          "WBC"
+        ]
+      }
+    }
+  },
+  "MB": {
+    "MBTSTDTL": {
+      "role": "Qualifier",
+      "codelist": {
+        "C174225": [
+          "DETECTION"
+        ]
+      }
+    },
+    "MBORRES": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20
+    },
+    "MBSTRESC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20
+    },
+    "MBSPEC": {
+      "role": "Qualifier",
+      "codelist": {
+        "C78734": [
+          "BLOOD",
+          "CEREBROSPINAL FLUID",
+          "FLUID",
+          "SERUM",
+          "SWABBED MATERIAL",
+          "URINE"
+        ]
+      }
+    },
+    "MBMETHOD": {
+      "role": "Qualifier",
+      "codelist": {
+        "C85492": [
+          "CHEMILUMINESCENT MICROPARTICLE IMMUNOASSAY",
+          "FLUORESCENT IMMUNOASSAY",
+          "HEMAGGLUTINATION ASSAY",
+          "IMMUNOBLOT",
+          "LINE PROBE ASSAY",
+          "POLYMERASE CHAIN REACTION",
+          "RAPID IMMUNOASSAY"
+        ]
+      }
+    },
+    "MBDTC": {
+      "role": "Timing"
+    },
+    "MBTESTCD": {
+      "codelist": {
+        "C120527": [
+          "TPADNA",
+          "TPLAB"
+        ]
+      }
+    }
+  },
+  "EC": {
+    "ECTRT": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "ECREFID": {
+      "role": "Qualifier",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "ECDOSE": {
+      "role": "Qualifier",
+      "dataType": "integer",
+      "length": 20,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "ECDOSTXT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 100,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "ECDOSU": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C71620": []
+      }
+    },
+    "ECDOSFRM": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66726": []
+      }
+    },
+    "ECDOSFRQ": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C71113": []
+      }
+    },
+    "ECDOSRGM": {
+      "role": "Qualifier",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "ECROUTE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66729": []
+      }
+    },
+    "ECLOC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C74456": [
+          "BUTTOCK",
+          "CHEST",
+          "THIGH",
+          "AXILLA",
+          "ARM",
+          "BACK"
+        ]
+      }
+    },
+    "ECLAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C99073": [
+          "LEFT",
+          "RIGHT"
+        ]
+      }
+    },
+    "ECDIR": {
+      "role": "Qualifier",
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C99074": [
+          "UPPER",
+          "MIDLINE",
+          "LOWER"
+        ]
+      }
+    },
+    "ECSTDTC": {
+      "role": "Timing",
+      "dataType": "datetime"
+    },
+    "ECENDTC": {
+      "role": "Timing",
+      "dataType": "datetime"
+    }
+  },
+  "AE": {
+    "AETERM": {
+      "role": "Topic",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEDECOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "AECAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "AESCAT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "AEPRESP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Assigned",
+      "originSource": "Sponsor",
+      "codelist": {
+        "C66742": [
+          "Y"
+        ]
+      }
+    },
+    "AELOC": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C74456": []
+      }
+    },
+    "AESEV": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66769": []
+      }
+    },
+    "AESER": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AEACN": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66767": []
+      }
+    },
+    "AEACNOTH": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEREL": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AERELNST": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEPATT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEOUT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 200,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66768": []
+      }
+    },
+    "AESCAN": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESCONG": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESDISAB": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESDTH": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESHOSP": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESLIFE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESOD": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AESMIE": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AECONTRT": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator",
+      "codelist": {
+        "C66742": [
+          "N",
+          "Y"
+        ]
+      }
+    },
+    "AETOXGR": {
+      "role": "Qualifier",
+      "dataType": "text",
+      "length": 1,
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AESTDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEENDTC": {
+      "role": "Timing",
+      "dataType": "datetime",
+      "originType": "Collected",
+      "originSource": "Investigator"
+    },
+    "AEENRF": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "AEENRTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    },
+    "AEENTPT": {
+      "role": "Timing",
+      "dataType": "text",
+      "length": 20,
+      "originType": "Assigned",
+      "originSource": "Sponsor"
+    }
+  },
+  "TS": {},
+  "TA": {
+    "EPOCH": {
+      "codelist": {
+        "C99079": [
+          "Screening",
+          "Treatment 1",
+          "Treatment 2",
+          "Treatment 3",
+          "Follow-Up"
+        ]
+      }
+    }
+  },
+  "TE": {},
+  "TI": {},
+  "TV": {},
+  "SV": {
+    "SVCNTMOD": {
+      "codelist": {
+        "C171445": [
+          "IN PERSON",
+          "TELEPHONE CALL"
+        ]
+      }
+    }
+  },
+  "IE": {},
+  "SE": {
+    "EPOCH": {
+      "codelist": {
+        "C99079": [
+          "Screening",
+          "Treatment 1",
+          "Treatment 2",
+          "Treatment 3",
+          "Follow-Up"
+        ]
+      }
+    }
+  }
+}

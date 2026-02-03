@@ -1,0 +1,2697 @@
+{
+  "SC.SCORRES": [
+    {
+      "OID": "IT.SC.SCORRES.EDULEVEL",
+      "mandatory": false,
+      "name": "SCORRES",
+      "dataType": "float",
+      "length": 4,
+      "displayFormat": "3.1",
+      "significantDigits": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.SC.48924878"
+      ]
+    },
+    {
+      "OID": "IT.SC.SCORRES.EDUYRNUM",
+      "mandatory": false,
+      "name": "SCORRES",
+      "dataType": "float",
+      "length": 4,
+      "displayFormat": "3.1",
+      "significantDigits": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.SC.e7173a71"
+      ]
+    }
+  ],
+  "SC.SCORRESU": [
+    {
+      "OID": "IT.SC.SCORRESU.EDUYRNUM",
+      "mandatory": false,
+      "name": "SCORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.SC.5fc4562e"
+      ]
+    }
+  ],
+  "VS.VSORRES": [
+    {
+      "OID": "IT.VS.VSORRES.TEMP",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "float",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.df8e6ed8"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.WEIGHT",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "float",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.362bc1cf"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.HEIGHT",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "float",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.22da90ca"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.PULSE",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "integer",
+      "length": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.90269389"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.RESP",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "integer",
+      "length": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.02e0f161"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.BMI",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "float",
+      "length": 8,
+      "displayFormat": "8.3",
+      "origin": {
+        "type": "Derived",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.VS.ba9d17a7"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.SYSBP",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "integer",
+      "length": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.037b6848"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.DIABP",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "integer",
+      "length": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.fe755a11"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRES.HR",
+      "mandatory": false,
+      "name": "VSORRES",
+      "dataType": "integer",
+      "length": 3,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.VS.324e0cc0"
+      ]
+    }
+  ],
+  "VS.VSORRESU": [
+    {
+      "OID": "IT.VS.VSORRESU.TEMP",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.dea56915"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.WEIGHT",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.ef959fbb"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.HEIGHT",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.97262f9f"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.PULSE",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.2fad3005"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.RESP",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.f296848d"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.BMI",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.ca4251ba"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.SYSBP",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.301c7ee3"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.DIABP",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.714dfc07"
+      ]
+    },
+    {
+      "OID": "IT.VS.VSORRESU.HR",
+      "mandatory": false,
+      "name": "VSORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.VS.5a9c1ab0"
+      ]
+    }
+  ],
+  "EG.EGORRES": [
+    {
+      "OID": "IT.EG.EGORRES.INTP",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 20,
+      "applicableWhen": [
+        "WC.EG.f60b99cb"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.AVCOND",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.d30401ba"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.AXISVOLT",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.0764363d"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.CHYPTENL",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.c7ca2c0d"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.TECHQUAL",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 200,
+      "applicableWhen": [
+        "WC.EG.0110957e"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.IVTIACD",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.7a2cbb17"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.PACEMAKR",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.c82f004b"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.RHYNOS",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.aaf51dd5"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.SNRARRY",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.0a478649"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.SPRARRY",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.44c12ce4"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.SPRTARRY",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.7c9fb72d"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.VTARRY",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.3a146a53"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.VTTARRY",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.5571a969"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.PRAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.13a9fd00"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.QRSAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.72304c3a"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.QTAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.6f155b1d"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.QTCBAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.dff815c6"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.QTCFAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.e967e1e7"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.RRAG",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.64f26102"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.EGHRMN",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.2ecbdce2"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRES.QRS_AXIS",
+      "mandatory": false,
+      "name": "EGORRES",
+      "dataType": "text",
+      "length": 8,
+      "displayFormat": "8.3",
+      "significantDigits": 3,
+      "applicableWhen": [
+        "WC.EG.9ce29aa6"
+      ]
+    }
+  ],
+  "EG.EGORRESU": [
+    {
+      "OID": "IT.EG.EGORRESU.PRAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.cec16291"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.QRSAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.5a1ab0f5"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.QTAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.ddb86367"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.QTCBAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.e847517c"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.QTCFAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.7f463007"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.RRAG",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.3d1ba9c3"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.EGHRMN",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.a40eb46d"
+      ]
+    },
+    {
+      "OID": "IT.EG.EGORRESU.QRS_AXIS",
+      "mandatory": false,
+      "name": "EGORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.EG.02ebb46f"
+      ]
+    }
+  ],
+  "LB.LBORRES": [
+    {
+      "OID": "IT.LB.LBORRES.HGB",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.c192b07f"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.HCT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.82b97100"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.RBC",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.87582e25"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MCH",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.95f4de22"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MCHC",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.92bd1f17"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MCV",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.24c0e2bc"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.WBC",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.351df44b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.NEUTSG",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.5f2a0bab"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.NEUTB",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.eea0ae49"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.NEUT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.550c7a01"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MONO",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.de4c119b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.EOS",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.a5684311"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.BASO",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.7b86c15b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.PLAT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.3a9d73e1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MICROCY",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.ddc3319f"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.MACROCY",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.116f85e4"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.ANISO",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.84ceb0ad"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.POIKILO",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.b622c728"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.POLYCHR",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.87b1b367"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.ALT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.5412b298"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.ALB",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.e42a3c09"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.ALP",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.cdac7fcc"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.AST",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.b9d7ddba"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.CREAT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.969c1a6d"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.K",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.7ce691fd"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.SODIUM",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.88601b52"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.UREAN",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.42392cd1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.BICARB",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.9279ec22"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.CL",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.8b779a3b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.BILI",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.cfe14422"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.GGT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.8285c765"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.URATE",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.37c7b4ba"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.PHOS",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.e4e81dc5"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.CA",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.470def9b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.GLUC",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "applicableWhen": [
+        "WC.LB.c891c160"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.PROT",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.abcfd20c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.CHOL",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.5a1bca67"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.T3UP",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.4226ee02"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.T3",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.df33e99e"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.T4FR",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.30f3d8b3"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.T4FRIDX",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.f59f4529"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.TSH",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.c54221c6"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.VITB9",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.cb02cad8"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.VITB12",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.d0f49556"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.COLOR",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.4987b41e"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.SPGRAV",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.cbf789d8"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.KETONES",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.3239d7a3"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.UROBIL",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.59366afe"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.OCCBLD",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.3adc4566"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.NITRITE",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "text",
+      "length": 200,
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.59074de1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.HBA1C",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.c1765eee"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRES.HBA1CHGB",
+      "mandatory": false,
+      "name": "LBORRES",
+      "dataType": "float",
+      "length": 12,
+      "displayFormat": "12.4",
+      "significantDigits": 4,
+      "origin": {
+        "type": "Collected",
+        "source": "Vendor"
+      },
+      "applicableWhen": [
+        "WC.LB.dd459ec6"
+      ]
+    }
+  ],
+  "LB.LBORRESU": [
+    {
+      "OID": "IT.LB.LBORRESU.HGB",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.e9a1c33d"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.HCT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.7f0975c7"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.RBC",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.f7f1de35"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.MCH",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.c32acb17"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.MCHC",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.eb7f048a"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.MCV",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.e881d4b5"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.WBC",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.41785be6"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.NEUTSG",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.a68e5eaa"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.NEUTB",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.aad6dbd6"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.NEUT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.d13d6578"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.MONO",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.00e6d228"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.EOS",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.ef654de1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.BASO",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.b6fa6e8d"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.PLAT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.90eedf3b"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.ALT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.8914eb45"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.ALP",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.6660e11c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.AST",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.37e389df"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.CREAT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.549f5ae4"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.K",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.ee634517"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.SODIUM",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.07a8daa1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.UREAN",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.91d1c3d5"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.BICARB",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.9df0845c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.CL",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.cc8b6004"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.GGT",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.3c564f36"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.URATE",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.13fbb1a5"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.PHOS",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.3749493c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.CA",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.38f9f39d"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.CHOL",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.516f3664"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.T3UP",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.dcbcbe57"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.T3",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.b7b215a1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.T4FR",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.0f071538"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.T4FRIDX",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.258e657c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.TSH",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.d675561c"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.VITB9",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.e81938d6"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.VITB12",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.54dda2d1"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.UROBIL",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.e6a434ec"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.HBA1C",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.9e9118c8"
+      ]
+    },
+    {
+      "OID": "IT.LB.LBORRESU.HBA1CHGB",
+      "mandatory": false,
+      "name": "LBORRESU",
+      "dataType": "text",
+      "applicableWhen": [
+        "WC.LB.8644d9ca"
+      ]
+    }
+  ],
+  "MB.MBORRES": [
+    {
+      "OID": "IT.MB.MBORRES.TPLAB",
+      "mandatory": false,
+      "name": "MBORRES",
+      "dataType": "text",
+      "length": 20,
+      "applicableWhen": [
+        "WC.MB.49773274"
+      ]
+    },
+    {
+      "OID": "IT.MB.MBORRES.TPADNA",
+      "mandatory": false,
+      "name": "MBORRES",
+      "dataType": "text",
+      "length": 20,
+      "applicableWhen": [
+        "WC.MB.e698c5a2"
+      ]
+    }
+  ],
+  "TS.TSPARMCD": [
+    {
+      "OID": "IT.TS.TSPARMCD.ADAPT",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 1,
+      "codeList": "CL.YN",
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.08ebd0ce"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.AGEMIN",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.a7d24f4a"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.AGEMAX",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.4ac86c98"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TRT",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.1948fed3"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.DOSE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.7fc6c3e6"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.DOSFRQ",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.5cd14c68"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.DOSU",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.4053f56c"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.ROUTE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.3c4a8bf2"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.PTRTDUR",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.2b2d70bc"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.PTRTDUR",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.2b2d70bc"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.INTTYPE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.e3ae16cd"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.EXTTIND",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 1,
+      "codeList": "CL.YN",
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.01bb382c"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.RANDOM",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 1,
+      "codeList": "CL.YN",
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.75be6b51"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.HLTSUBJI",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 1,
+      "codeList": "CL.YN",
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.ed057154"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.INDIC",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.9cdae039"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.RDIND",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.998e5652"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.INTMODEL",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.2c83b5d9"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.LENGTH",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.1458a3cc"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.NARMS",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.89c0d243"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.OBJPRIM",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.7a056c75"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.OUTMSPRI",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.d8b84608"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.OBJSEC",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.36721696"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.OUTMSSEC",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.1d3cd461"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.PLANSUB",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.3a1c5c3c"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.SPONSOR",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.51236927"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.REGID",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.c5c52c05"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.SEXPOP",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.4f0c74c2"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.SPREFID",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.22126698"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.STYPE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.f4cb41bb"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TBLIND",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.9e101607"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.THERAREA",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.d8c1ac4c"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TINDTP",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.e423672b"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TITLE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.43684533"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TPHASE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.22640600"
+      ]
+    },
+    {
+      "OID": "IT.TS.TSPARMCD.TTYPE",
+      "mandatory": false,
+      "name": "TSPARMCD",
+      "dataType": "text",
+      "length": 200,
+      "origin": {
+        "type": "Protocol",
+        "source": "Sponsor"
+      },
+      "applicableWhen": [
+        "WC.TS.29af0670"
+      ]
+    }
+  ],
+  "IE.IEORRES": [
+    {
+      "OID": "IT.IE.IEORRES.IN01",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.1d2bb25f"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN02",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.fa688bf3"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN03",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.f276b607"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN04",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.cd528448"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN05",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.c1db3fd3"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN06",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.c2ec614b"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN07",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.2ef341aa"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.IN08",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.5d85184b"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX01",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.8579104c"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX02",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.74eacc45"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX03",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.ce0e8d09"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX04",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.945bafbd"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX05",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.afbec960"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX06",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.cac0d3f4"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX07",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.cabd9be0"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX08",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.fbae7983"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX09",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.0952c014"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX10",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.5b8b02b2"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX11",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.70a941e7"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX12",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.611f5d7b"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX13",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.8abff918"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX14",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.b089a2a0"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX15",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.39cb2456"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX16",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.2cdb5c18"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX17",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.b415f3a9"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX18",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.5c29f970"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX19",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.9fe9a358"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX20",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.e36b210b"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX21",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.743b4fb5"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX22",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.76a82754"
+      ]
+    },
+    {
+      "OID": "IT.IE.IEORRES.EX23",
+      "mandatory": false,
+      "name": "IEORRES",
+      "dataType": "text",
+      "length": 1,
+      "origin": {
+        "type": "Collected",
+        "source": "Investigator"
+      },
+      "applicableWhen": [
+        "WC.IE.fbeb5a1e"
+      ]
+    }
+  ]
+}
