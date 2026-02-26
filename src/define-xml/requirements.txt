@@ -1,0 +1,10 @@
+cdisc-library-client==0.1.6
+certifi==2026.1.4
+charset-normalizer==3.4.4
+dotenv==0.9.9
+idna==3.11
+jsonata-python==0.6.1
+python-dotenv==1.2.1
+PyYAML==6.0.3
+requests==2.32.5
+urllib3==2.6.3
