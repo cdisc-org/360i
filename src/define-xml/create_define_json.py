@@ -473,7 +473,7 @@ class USDMDefine360iProcessor:
         self.vlm_lookup["TSPARMCD"] = []
 
         # ADAPT
-        if self.studyDesignData.get('characteristics', []):
+        if any(code.get('code') == 'C98704' for code in self.studyDesignData.get('characteristics', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 1,
@@ -497,7 +497,8 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
 
         # AGEMIN
-        if self.studyDesignData.get('population', {}).get("plannedAge", {}).get("minValue", {}).get("value") is not None:
+        if self.studyDesignData.get('population', {}).get("plannedAge", {}).get("minValue", {}).get("value") is not None or \
+           any(cohort.get('plannedAge', {}).get('minValue', {}).get('value') is not None for cohort in self.studyDesignData.get('population', {}).get('cohorts', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -520,7 +521,8 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
 
         # AGEMAX
-        if self.studyDesignData.get('population', {}).get("plannedAge", {}).get("maxValue", {}).get("value") is not None:
+        if self.studyDesignData.get('population', {}).get("plannedAge", {}).get("maxValue", {}).get("value") is not None or \
+           any(cohort.get('plannedAge', {}).get('maxValue', {}).get('value') is not None for cohort in self.studyDesignData.get('population', {}).get('cohorts', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -542,244 +544,280 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
 
-
-        # COMPTRT, CURTRT, DOSE, DOSFRQ, DOSU, INTTYPE, PTRTDUR
-        if self.studyDesignData.get('studyInterventionIds', []):
-            comptrt_added = False 
-            curtrt_added = False 
-            dose_added = False
-            dosfrq_added = False
-            dosu_added = False
-            route_added = False
-            inttype_added = False
-            ptrtdur_added = False
-            trt_added = False
-            for intervention_id in self.studyDesignData.get('studyInterventionIds', []):
-                for intervention in self.study_version_data.get('studyInterventions', []):
-                    
-                    if intervention.get('id') == intervention_id:
-                        # Get the role code from the intervention
-                        role_code = intervention.get('role', {}).get('code', '')
-
-                        if role_code != 'C41161' and not comptrt_added:  # Experimental Intervention
-                            tsparmcd_entry = {
-                                "dataType": "text",
-                                "length": 200,
-                                "originType": "Protocol",
-                                "originSource": "Sponsor",
-                                "WhereClause": [
-                                    {
-                                        "Clause": [
-                                            {
-                                                "Dataset": "TS",
-                                                "Variable": "TSPARMCD",
-                                                "item": "IT.TS.TSPARMCD",
-                                                "Comparator": "EQ",
-                                                "Values": ["COMPTRT"]
-                                            }
-                                        ]
-                                    }
-                                ]
+        # BRDNAIND
+        if any(br.get('includesDNA', None) is True for br in self.studyDesignData.get('biospecimenRetentions', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["BRDNAIND"]
                             }
-                            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                            comptrt_added = True  # Mark as added to prevent duplicates
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
 
-                        if role_code == 'C165822' and not curtrt_added:  # Experimental Intervention
-                            tsparmcd_entry = {
-                                "dataType": "text",
-                                "length": 200,
-                                "originType": "Protocol",
-                                "originSource": "Sponsor",
-                                "WhereClause": [
-                                    {
-                                        "Clause": [
-                                            {
-                                                "Dataset": "TS",
-                                                "Variable": "TSPARMCD",
-                                                "item": "IT.TS.TSPARMCD",
-                                                "Comparator": "EQ",
-                                                "Values": ["CURTRT"]
-                                            }
-                                        ]
-                                    }
-                                ]
+        # BRIND
+        if any(br.get('isRetained', None) is True for br in self.studyDesignData.get('biospecimenRetentions', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["BRIND"]
                             }
-                            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                            curtrt_added = True  # Mark as added to prevent duplicates
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
 
-                        if not trt_added:  # Treatment
-                            tsparmcd_entry = {
-                                "dataType": "text",
-                                "length": 200,
-                                "originType": "Protocol",
-                                "originSource": "Sponsor",
-                                "WhereClause": [
-                                    {
-                                        "Clause": [
-                                            {
-                                                "Dataset": "TS",
-                                                "Variable": "TSPARMCD",
-                                                "item": "IT.TS.TSPARMCD",
-                                                "Comparator": "EQ",
-                                                "Values": ["TRT"]
-                                            }
-                                        ]
-                                    }
-                                ]
+        # COMPTRT
+        if any(
+            intervention.get('role', {}).get('code') 
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["COMPTRT"]
                             }
-                            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                            trt_added = True  # Mark as added to prevent duplicates
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-
-                        for administration in intervention.get('administrations', []):
-                        # Get the first administration (administrations is a list)
-                        
-                            dose = administration.get('dose', {}).get('value', None)
-                            dosfrq = administration.get('frequency', {}).get('standardCode', {}).get('code', '')
-                            dosu = administration.get('dose', {}).get('unit', {}).get('standardCode', {}).get('code', '')
-                            dur = administration.get('duration', {}).get('quantity', {}).get('value', None)
-                            route = administration.get('route', {}).get('standardCode', {}).get('code', '')
-
-                            if dose and not dose_added:  # Dose
-                                tsparmcd_entry = {
-                                    "dataType": "text",
-                                    "length": 200,
-                                    "originType": "Protocol",
-                                    "originSource": "Sponsor",
-                                    "WhereClause": [
-                                        {
-                                            "Clause": [
-                                                {
-                                                    "Dataset": "TS",
-                                                    "Variable": "TSPARMCD",
-                                                    "item": "IT.TS.TSPARMCD",
-                                                    "Comparator": "EQ",
-                                                    "Values": ["DOSE"]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                                self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                                dose_added = True  # Mark as added to prevent duplicates
-
-                            if dosfrq != '' and not dosfrq_added:  # Dose Frequency
-                                tsparmcd_entry = {
-                                    "dataType": "text",
-                                    "length": 200,
-                                    "originType": "Protocol",
-                                    "originSource": "Sponsor",
-                                    "WhereClause": [
-                                        {
-                                            "Clause": [
-                                                {
-                                                    "Dataset": "TS",
-                                                    "Variable": "TSPARMCD",
-                                                    "item": "IT.TS.TSPARMCD",
-                                                    "Comparator": "EQ",
-                                                    "Values": ["DOSFRQ"]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                                self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                                dosfrq_added = True  # Mark as added to prevent duplicates
-
-                            if dosu != '' and not dosu_added:  # Dose Unit
-                                tsparmcd_entry = {
-                                    "dataType": "text",
-                                    "length": 200,
-                                    "originType": "Protocol",
-                                    "originSource": "Sponsor",
-                                    "WhereClause": [
-                                        {
-                                            "Clause": [
-                                                {
-                                                    "Dataset": "TS",
-                                                    "Variable": "TSPARMCD",
-                                                    "item": "IT.TS.TSPARMCD",
-                                                    "Comparator": "EQ",
-                                                    "Values": ["DOSU"]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                                self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                                dosu_added = True  # Mark as added to prevent duplicates
-
-                            if route != '' and not route_added:  # Route
-                                tsparmcd_entry = {
-                                    "dataType": "text",
-                                    "length": 200,
-                                    "originType": "Protocol",
-                                    "originSource": "Sponsor",
-                                    "WhereClause": [
-                                        {
-                                            "Clause": [
-                                                {
-                                                    "Dataset": "TS",
-                                                    "Variable": "TSPARMCD",
-                                                    "item": "IT.TS.TSPARMCD",
-                                                    "Comparator": "EQ",
-                                                    "Values": ["ROUTE"]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                                self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                                route_added = True  # Mark as added to prevent duplicates
-
-                            if dur and not ptrtdur_added:  
-                                tsparmcd_entry = {
-                                    "dataType": "text",
-                                    "length": 200,
-                                    "originType": "Protocol",
-                                    "originSource": "Sponsor",
-                                    "WhereClause": [
-                                        {
-                                            "Clause": [
-                                                {
-                                                    "Dataset": "TS",
-                                                    "Variable": "TSPARMCD",
-                                                    "item": "IT.TS.TSPARMCD",
-                                                    "Comparator": "EQ",
-                                                    "Values": ["PTRTDUR"]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                                self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                                dose_added = True  # Mark as added to prevent duplicates
-
-                        if intervention.get('type', {}) and not inttype_added:
-                            tsparmcd_entry = {
-                                "dataType": "text",
-                                "length": 200,
-                                "originType": "Protocol",
-                                "originSource": "Sponsor",
-                                "WhereClause": [
-                                    {
-                                        "Clause": [
-                                            {
-                                                "Dataset": "TS",
-                                                "Variable": "TSPARMCD",
-                                                "item": "IT.TS.TSPARMCD",
-                                                "Comparator": "EQ",
-                                                "Values": ["INTTYPE"]
-                                            }
-                                        ]
-                                    }
-                                ]
+        # CRMDUR
+        if any(
+            intervention.get('minimumResponseDuration', {}).get('value', None)
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["CRMDUR"]
                             }
-                            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                            inttype_added = True  # Mark as added to prevent duplicates
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-        # EXTTIND, RANDOM
-        if self.studyDesignData.get('characteristics', []):
+        # CURTRT
+        if any(
+            intervention.get('role', {}).get('code', '') == 'C165822'
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["CURTRT"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # DMCIND
+        if any(code.get('code') == 'C142578' for code in self.study_version_data.get('roles', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 1,
+                "codeList": "CL.YN",
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["DMCIND"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
+
+        # DOSE
+        if any(
+            administration.get('dose', {}).get('value', None)
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["DOSE"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # DOSFRM
+        if any(
+            product.get('administrableDoseForm', {}).get('standardCode', {}).get('decode')
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+            for product in self.study_version_data.get('administrableProducts', [])
+            if product.get('id') == administration.get('administrableProductId')
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["DOSFRM"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # DOSFRQ
+        if any(
+            administration.get('frequency', {}).get('standardCode', {}).get('code') 
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["DOSFRQ"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # DOSU
+        if any(
+            administration.get('dose', {}).get('unit', {}).get('standardCode', {}).get('code') 
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["DOSU"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # EXTTIND
+        if any(code.get('code') == 'C207613' for code in self.studyDesignData.get('characteristics', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 1,
@@ -800,33 +838,11 @@ class USDMDefine360iProcessor:
                     }
                 ]
             }
-            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
-                        
-            tsparmcd_entry = {
-                "dataType": "text",
-                "length": 1,
-                "codeList": "CL.YN",
-                "originType": "Protocol",
-                "originSource": "Sponsor",
-                "WhereClause": [
-                    {
-                        "Clause": [
-                            {
-                                "Dataset": "TS",
-                                "Variable": "TSPARMCD",
-                                "item": "IT.TS.TSPARMCD",
-                                "Comparator": "EQ",
-                                "Values": ["RANDOM"]
-                            }
-                        ]
-                    }
-                ]
-            }
-            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
-                        
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # HLTSUBJI
-        if self.studyDesignData.get('population', {}).get("includesHealthySubjects", None) is not None:
+        if self.studyDesignData.get('population', {}).get("includesHealthySubjects") is True or \
+           any(cohort.get('includesHealthySubjects') is True for cohort in self.studyDesignData.get('population', {}).get('cohorts', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 1,
@@ -849,8 +865,8 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-        # INDIC, RDIND
-        if self.studyDesignData.get('indications', []):
+        # INDIC
+        if any(indication.get('label') for indication in self.studyDesignData.get('indications', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -872,30 +888,8 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-            tsparmcd_entry = {
-                "dataType": "text",
-                "length": 1,
-                "codeList": "CL.YN",
-                "originType": "Protocol",
-                "originSource": "Sponsor",
-                "WhereClause": [
-                    {
-                        "Clause": [
-                            {
-                                "Dataset": "TS",
-                                "Variable": "TSPARMCD",
-                                "item": "IT.TS.TSPARMCD",
-                                "Comparator": "EQ",
-                                "Values": ["RDIND"]
-                            }
-                        ]
-                    }
-                ]
-            }
-            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-
         # INTMODEL
-        if self.studyDesignData.get('model', {}):
+        if self.studyDesignData['studyType']['code'] == 'C98388' and self.studyDesignData.get('model', {}).get('decode', '') != '':
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -917,8 +911,40 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
+        # INTTYPE
+        if any(
+            intervention.get('type', {}).get('decode', '') != ''
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["INTTYPE"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
         # LENGTH
-        if self.studyDesignData.get('scheduleTimelines', []):
+        if any(
+            (timeline.get('plannedDuration') or {}).get('quantity', {}).get('value', '') != ''
+            for timeline in self.studyDesignData.get('scheduleTimelines', [])
+            if timeline.get('label') == 'Main Timeline'
+        ):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -964,7 +990,7 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # NCOHORT
-        if self.studyDesignData.get('population', {}).get("cohorts"):
+        if self.studyDesignData.get('population', {}).get("cohorts", []):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -986,159 +1012,308 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-        # OBJPRIM, OBJSEC, OBJEXP, OUTMSEXP, OUTMSPRI, OUTMSSEC
-        if self.studyDesignData.get('objectives', []):
-            objprim_added = False 
-            objsec_added = False 
-            objexp_added = False
-            outmsexp_added = False
-            outmspri_added = False
-            outmssec_added = False
-            for objective in self.studyDesignData.get('objectives', []):
-                # Get the role code from the intervention
-                label_code = objective.get('level', {}).get('code', '')
-                endpoints = objective.get('endpoints', [])
-
-                if label_code == 'C85826' and not objprim_added:  
-                    tsparmcd_entry = {
-                        "dataType": "text",
-                        "length": 200,
-                        "originType": "Protocol",
-                        "originSource": "Sponsor",
-                        "WhereClause": [
+        # OBJEXP
+        if any(objective.get('level', {}).get('code', '') == 'C163559' for objective in self.studyDesignData.get('objectives', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
                             {
-                                "Clause": [
-                                    {
-                                        "Dataset": "TS",
-                                        "Variable": "TSPARMCD",
-                                        "item": "IT.TS.TSPARMCD",
-                                        "Comparator": "EQ",
-                                        "Values": ["OBJPRIM"]
-                                    }
-                                ]
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBJEXP"]
                             }
                         ]
                     }
-                    self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                    objprim_added = True  # Mark as added to prevent duplicates
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                if label_code == 'C85827' and not objsec_added:  
-                    tsparmcd_entry = {
-                        "dataType": "text",
-                        "length": 200,
-                        "originType": "Protocol",
-                        "originSource": "Sponsor",
-                        "WhereClause": [
+        # OBJPRIM
+        if any(objective.get('level', {}).get('code', '') == 'C85826' for objective in self.studyDesignData.get('objectives', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
                             {
-                                "Clause": [
-                                    {
-                                        "Dataset": "TS",
-                                        "Variable": "TSPARMCD",
-                                        "item": "IT.TS.TSPARMCD",
-                                        "Comparator": "EQ",
-                                        "Values": ["OBJSEC"]
-                                    }
-                                ]
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBJPRIM"]
                             }
                         ]
                     }
-                    self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                    objsec_added = True  # Mark as added to prevent duplicates
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                if label_code == 'C163559' and not objexp_added:  
-                    tsparmcd_entry = {
-                        "dataType": "text",
-                        "length": 200,
-                        "originType": "Protocol",
-                        "originSource": "Sponsor",
-                        "WhereClause": [
+        # OBJSEC
+        if any(objective.get('level', {}).get('code', '') == 'C85827' for objective in self.studyDesignData.get('objectives', [])):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
                             {
-                                "Clause": [
-                                    {
-                                        "Dataset": "TS",
-                                        "Variable": "TSPARMCD",
-                                        "item": "IT.TS.TSPARMCD",
-                                        "Comparator": "EQ",
-                                        "Values": ["OBJEXP"]
-                                    }
-                                ]
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBJSEC"]
                             }
                         ]
                     }
-                    self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                    objexp_added = True  # Mark as added to prevent duplicates
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                for endpoint in endpoints:
-                    endpoint_level_code = endpoint.get('level', {}).get('code', '')
+        # OBSMODEL
+        if self.studyDesignData['studyType']['code'] == 'C16084' and self.studyDesignData.get('model', {}).get('decode', '') != '':
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBSMODEL"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                    if endpoint_level_code == 'C170559' and not outmsexp_added:  
-                        tsparmcd_entry = {
-                            "dataType": "text",
-                            "length": 200,
-                            "originType": "Protocol",
-                            "originSource": "Sponsor",
-                            "WhereClause": [
-                                {
-                                    "Clause": [
-                                        {
-                                            "Dataset": "TS",
-                                            "Variable": "TSPARMCD",
-                                            "item": "IT.TS.TSPARMCD",
-                                            "Comparator": "EQ",
-                                            "Values": ["OUTMSEXP"]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                        self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                        outmsexp_added = True  # Mark as added to prevent duplicates
+        # OBSTIMP
+        if self.studyDesignData['studyType']['code'] == 'C16084' and self.studyDesignData.get('timePerspective', {}).get('decode', '') != '':
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBSTIMP"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                    if endpoint_level_code == 'C94496' and not outmspri_added:  
-                        tsparmcd_entry = {
-                            "dataType": "text",
-                            "length": 200,
-                            "originType": "Protocol",
-                            "originSource": "Sponsor",
-                            "WhereClause": [
-                                {
-                                    "Clause": [
-                                        {
-                                            "Dataset": "TS",
-                                            "Variable": "TSPARMCD",
-                                            "item": "IT.TS.TSPARMCD",
-                                            "Comparator": "EQ",
-                                            "Values": ["OUTMSPRI"]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                        self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                        outmspri_added = True  # Mark as added to prevent duplicates
+        # OBSTPOPD
+        if self.studyDesignData['studyType']['code'] == 'C16084' and self.studyDesignData.get('population', {}).get('description', '') != '':
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBSTPOPD"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                    if endpoint_level_code == 'C139173' and not outmssec_added:  
-                        tsparmcd_entry = {
-                            "dataType": "text",
-                            "length": 200,
-                            "originType": "Protocol",
-                            "originSource": "Sponsor",
-                            "WhereClause": [
-                                {
-                                    "Clause": [
-                                        {
-                                            "Dataset": "TS",
-                                            "Variable": "TSPARMCD",
-                                            "item": "IT.TS.TSPARMCD",
-                                            "Comparator": "EQ",
-                                            "Values": ["OUTMSSEC"]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                        self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                        outmssec_added = True  # Mark as added to prevent duplicates
+        # OBSTSMM
+        if self.studyDesignData['studyType']['code'] == 'C16084' and self.studyDesignData.get('samplingMethod', {}).get('decode', '') != '':
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OBSTSMM"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # OUTMSEXP
+        if any(
+            endpoint.get('level', {}).get('code', '') == 'C170559'
+            for objective in self.studyDesignData.get('objectives', [])
+            for endpoint in objective.get('endpoints', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OUTMSEXP"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # OUTMSPRI
+        if any(
+            endpoint.get('level', {}).get('code', '') == 'C94496'
+            for objective in self.studyDesignData.get('objectives', [])
+            for endpoint in objective.get('endpoints', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OUTMSPRI"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # OUTMSSEC
+        if any(
+            endpoint.get('level', {}).get('code', '') == 'C139173'
+            for objective in self.studyDesignData.get('objectives', [])
+            for endpoint in objective.get('endpoints', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["OUTMSSEC"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # PCLAS
+        if any(
+            product.get('pharmacologicClass', {}).get('decode')
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+            for product in self.study_version_data.get('administrableProducts', [])
+            if product.get('id') == administration.get('administrableProductId')
+            and any(
+                designation.get('code') == 'C202579'
+                for designation in product.get('productDesignation', [])
+            )
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["PCLAS"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # PIPIND
+        if any(
+            reference_identifier.get('type', {}).get('code', '') == 'C215674'
+            for reference_identifier in self.study_version_data.get('referenceIdentifiers', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["PIPIND"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # PLANSUB
         if self.studyDesignData.get('population', {}).get("plannedEnrollmentNumber", {}).get("value", None) is not None:            
@@ -1163,62 +1338,149 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-
-        # REGID, SPONSOR
-        if self.study_version_data.get('organizations', []):          
-            regid_added = False
-            sponsor_added = False 
-            for organization in self.study_version_data.get('organizations', []):
-                organization_type_code = organization.get('type', {}).get('code', '')
-
-                if organization_type_code == 'C93453' and not regid_added:  
-                    tsparmcd_entry = {
-                        "dataType": "text",
-                        "length": 200,
-                        "originType": "Protocol",
-                        "originSource": "Sponsor",
-                        "WhereClause": [
+        # PTRTDUR
+        if any(
+            administration.get('duration', {}).get('quantity', {}).get('value', None)
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
                             {
-                                "Clause": [
-                                    {
-                                        "Dataset": "TS",
-                                        "Variable": "TSPARMCD",
-                                        "item": "IT.TS.TSPARMCD",
-                                        "Comparator": "EQ",
-                                        "Values": ["REGID"]
-                                    }
-                                ]
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["PTRTDUR"]
                             }
                         ]
                     }
-                    self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                    regid_added = True  # Mark as added to prevent duplicates
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-                if organization_type_code == 'C70793' and not sponsor_added:  
-                    tsparmcd_entry = {
-                        "dataType": "text",
-                        "length": 200,
-                        "originType": "Protocol",
-                        "originSource": "Sponsor",
-                        "WhereClause": [
+        # RANDOM
+        if any(
+            characteristic.get('level', {}).get('code', '') in ('C46079','C147145')
+            for characteristic in self.studyDesignData.get('characteristics', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 1,
+                "codeList": "CL.YN",
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
                             {
-                                "Clause": [
-                                    {
-                                        "Dataset": "TS",
-                                        "Variable": "TSPARMCD",
-                                        "item": "IT.TS.TSPARMCD",
-                                        "Comparator": "EQ",
-                                        "Values": ["SPONSOR"]
-                                    }
-                                ]
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["RANDOM"]
                             }
                         ]
                     }
-                    self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
-                    sponsor_added = True  # Mark as added to prevent duplicates
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)   
+                        
+        # RDIND
+        if any(
+            indication.get('isRareDisease') is True 
+            for indication in self.studyDesignData.get('indications', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 1,
+                "codeList": "CL.YN",
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["RDIND"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # ROUTE
+        if any(
+            administration.get('route', {}).get('standardCode', {}).get('decode', '') != ''
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+            for administration in intervention.get('administrations', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["ROUTE"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
+        # RTSPCDES
+        if any(
+            biospecimenRetention.get('description', '') != ''
+            for biospecimenRetention in self.studyDesignData.get('biospecimenRetentions', [])
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["RTSPCDES"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # SEXPOP
-        if self.studyDesignData.get('population', {}).get("plannedSex", []):
+        if any(
+            sex.get('decode', '') != '' 
+            for sex in self.studyDesignData.get('population', {}).get("plannedSex", [])
+        ):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1240,8 +1502,11 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
-        # SPREFID
-        if self.study_version_data.get('referenceIdentifiers', []):
+        # SPONSOR
+        if any(
+            organization.get('type', {}).get('code', '') == 'C70793' 
+            for organization in self.study_version_data.get('organizations', [])
+        ):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1255,7 +1520,7 @@ class USDMDefine360iProcessor:
                                 "Variable": "TSPARMCD",
                                 "item": "IT.TS.TSPARMCD",
                                 "Comparator": "EQ",
-                                "Values": ["SPREFID"]
+                                "Values": ["SPONSOR"]
                             }
                         ]
                     }
@@ -1264,7 +1529,7 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # STYPE
-        if self.studyDesignData.get('studyType', {}):
+        if self.studyDesignData.get('studyType', {}).get('decode', '') != '':
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1287,7 +1552,7 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # TBLIND
-        if self.studyDesignData.get('blindingSchema', {}):
+        if self.studyDesignData.get('blindingSchema', {}).get('standardCode', {}).get('decode', '') != '':
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1310,7 +1575,10 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # THERAREA
-        if self.studyDesignData.get('therapeuticAreas', []):
+        if any(
+            area.get('decode', '') != '' 
+            for area in self.studyDesignData.get('therapeuticAreas', [])
+        ):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1333,7 +1601,8 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # TINDTP
-        if self.studyDesignData.get('intentTypes', []):
+        if self.studyDesignData.get('studyType', {}).get('code', '') == 'C98388' and \
+           any(intent.get('decode', '') != '' for intent in self.studyDesignData.get('intentTypes', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1356,7 +1625,11 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # TITLE
-        if self.study_version_data.get('titles', []):
+        if any(
+            title.get('text', '') != ''
+            for title in self.study_version_data.get('titles', [])
+            if title.get('type', {}).get('code', '') == 'C207616'
+        ):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1379,7 +1652,7 @@ class USDMDefine360iProcessor:
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
         # TPHASE
-        if self.studyDesignData.get('studyPhase', {}):
+        if self.studyDesignData.get('studyPhase', {}).get('standardCode', {}).get('decode', '') != '':
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -1401,8 +1674,37 @@ class USDMDefine360iProcessor:
             }
             self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
 
+        # TRT
+        if any(
+            intervention.get('label', '') != ''
+            for intervention_id in self.studyDesignData.get('studyInterventionIds', [])
+            for intervention in self.study_version_data.get('studyInterventions', [])
+            if intervention.get('id') == intervention_id
+        ):
+            tsparmcd_entry = {
+                "dataType": "text",
+                "length": 200,
+                "originType": "Protocol",
+                "originSource": "Sponsor",
+                "WhereClause": [
+                    {
+                        "Clause": [
+                            {
+                                "Dataset": "TS",
+                                "Variable": "TSPARMCD",
+                                "item": "IT.TS.TSPARMCD",
+                                "Comparator": "EQ",
+                                "Values": ["TRT"]
+                            }
+                        ]
+                    }
+                ]
+            }
+            self.vlm_lookup["TSPARMCD"].append(tsparmcd_entry)
+
         # TTYPE
-        if self.studyDesignData.get('subTypes', []):
+        if self.studyDesignData.get('studyType', {}).get('code', '') == 'C98388' and \
+           any(subType.get('decode', '') != '' for subType in self.studyDesignData.get('subTypes', [])):
             tsparmcd_entry = {
                 "dataType": "text",
                 "length": 200,
@@ -2802,6 +3104,12 @@ def main():
     Parses command-line arguments and orchestrates the USDM to Define-360i
     transformation process.
     """
+    # Reconfigure stdout to UTF-8 so Unicode symbols (✓, ✅, ❌, ⚠️) don't
+    # crash on Windows terminals that default to cp1252.
+    import sys
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
     parser = argparse.ArgumentParser(
         description="Process USDM JSON file to generate Define-360i JSON with slices.",
         epilog="Example: python create_define_json.py --usdm_file data/study.json --output_template output.json --sdtmct 2025-03-28 --validate define.yaml --validation_report validation_report.xlsx"
